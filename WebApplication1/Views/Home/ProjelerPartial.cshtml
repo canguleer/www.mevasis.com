@@ -1,0 +1,37 @@
+﻿@model IEnumerable<MevaPro.Models.Projeler>
+@{
+    ViewBag.Title = "ProjelerPartial";
+    Layout = null;
+}
+
+
+<div class="five-item-carousel owl-carousel owl-theme owl-nav-none owl-dot-none">
+
+
+
+    @foreach (var item in Model)
+    {
+        <div class="project-block-one">
+            <div class="inner-box">
+                <div class="image">
+                    <img src="~/@item.Foto" alt="" style="width:270px; height:350px;">
+                    <div class="caption">
+                        <div>
+                            <h4>@item.Baslik</h4>
+                        </div>
+                    </div>
+                    <div class="overlay-box">
+                        <div class="overlay-inner">
+                            <div class="content">
+                                <h4><a href="project-details.html">@item.Baslik</a></h4>
+                                <div class="text">@item.Icerik</div>
+                                <a href="/mevasis/proje-detay/@item.seourl" class="read-more">Daha Fazla</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    }
+</div>

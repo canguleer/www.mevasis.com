@@ -1,0 +1,94 @@
+/* Bremond - HTML Template */
+
+@media only screen and (max-width: 1800px) {
+	.main-slider2 .slider-wrapper .image img {
+		width: auto;
+	}
+}
+
+@media only screen and (max-width: 1300px) {
+
+}
+
+@media only screen and (max-width: 1024px) {
+
+}
+
+@media only screen and (max-width: 1199px) {
+	.page-wrapper {
+		margin-bottom: 0px !important;
+	}
+}
+
+@media only screen and (max-width: 991px) {
+	.service-block-one-area {
+		padding-left: 0px;
+	}
+	.service-block-two-area .outer-box {
+		margin-top: 50px;
+		margin-left: 0px;
+	}
+	.testimonial-block-two .text {
+		padding: 0 75px;
+	}
+	.feature-case-two:nth-child(2) .row,
+	.feature-case-two:nth-child(4) .row {
+	    flex-direction: column-reverse;
+	}
+	.feature-case-two .image {
+		margin-bottom: 30px;
+	}
+	.stacked-image-carousel {
+		margin-left: 0px;
+	}
+	.testimonial-block-three .big-image {
+		bottom: -100px;
+	}
+	.testimonial-three .owl-nav-style-one .owl-nav {
+		margin-top: 0px;
+		top: -80px;
+	}
+}
+@media only screen and (max-width: 767px) {
+	.sec-title .big-title {
+		font-size: 42px;
+	}
+}
+
+@media only screen and (max-width: 599px) {
+	.main-slider2 h1 {
+		font-size: 48px;
+		line-height: 50px;
+	}
+	.testimonial-block-two .text {
+		padding: 0px;
+	}
+	.testimonial-two .owl-nav {
+		display: none;
+	}
+	.stacked-image-carousel .slide.active, 
+	.stacked-image-carousel .slides .slide:nth-child(3),
+	.stacked-image-carousel .slides .slide:nth-child(3).active {
+		top: 0px !important;
+		left: 0px !important;
+	}
+	.timeline-container .timeline-block .inner-box {
+	    padding-left: 130px;
+	}
+	.timeline-container .timeline-block:before {
+	    left: 100px;
+	}
+	.timeline-container .timeline-block:after {
+	    left: 92px;
+	}
+	.news-block-one .lower-content.style-two {
+		margin: 0px;
+	}
+	.page-title .outer-box {
+	    display: block;
+	    vertical-align: middle;
+	    padding: 80px 0;
+	    height: auto;
+	}
+}
+

@@ -1,0 +1,38 @@
+﻿
+@model IEnumerable<MevaPro.Models.Referanslar>
+
+@{
+    ViewBag.Title = "ReferanslarPartial";
+    Layout = null;
+}
+
+<div class="client-logo-area">
+    <ul class="five-item-carousel owl-carousel owl-theme owl-dot-none owl-nav-none">
+        @*<li><a href="#"><img src="~/Content/images/resource/bmc.jpg" alt=""></a></li>
+        <li><a href="#"><img src="~/Content/images/resource/2tei-150x101.png" alt=""></a></li>
+        <li><a href="#"><img src="~/Content/images/resource/itu_logo-150x150.png" alt=""></a></li>
+        <li><a href="#"><img src="~/Content/images/resource/ytulogopng-150x150.png" alt=""></a></li>
+        <li><a href="#"><img src="~/Content/images/resource/iulogo-150x150.png" alt=""></a></li>
+        <li><a href="#"><img src="~/Content/images/resource/harran_universitesi_logo-150x150.png" alt=""></a></li>
+        <li><a href="#"><img src="~/Content/images/resource/bmc_power_logo.png" alt=""></a></li>
+        <li><a href="#"><img src="~/Content/images/resource/TurkTelekom-150x150.png" alt=""></a></li>
+        <li><a href="#"><img src="~/Content/images/resource/mkr-ic_logo.png" alt=""></a></li>
+        <li><a href="#"><img src="~/Content/images/resource/turkcell-logo-150x131.png" alt=""></a></li>
+        <li><a href="#"><img src="~/Content/images/resource/iett.png" alt=""></a></li>
+        <li><a href="#"><img src="~/Content/images/resource/gokkusagikoleji-150x133.jpg" alt=""></a></li>
+        <li><a href="#"><img src="~/Content/images/resource/sabanci_universitesi_logo_rgb.jpg" alt=""></a></li>
+        <li><a href="#"><img src="~/Content/images/resource/Koc_Uni.png" alt=""></a></li>
+        <li><a href="#"><img src="~/Content/images/resource/Kordsa_Logo.png" alt=""></a></li>
+        <li><a href="#"><img src="~/Content/images/resource/svr_logo.png" alt=""></a></li>*@
+        @*<li><a href="#"><img src="~/Content/images/resource/abe_tek_logo.png" alt=""></a></li>*@
+
+
+        @foreach (var item in Model)
+        {
+            <li><a href=""><img src="@item.Foto" style="width:210px; height:210px;" alt=""></a></li>
+        }
+
+
+
+    </ul>
+</div>

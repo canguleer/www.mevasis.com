@@ -1,0 +1,120 @@
+﻿
+@{
+    ViewBag.Title = "SlurmGUI";
+    Layout = "~/Views/Shared/Layout.cshtml";
+}
+
+<section class="project-details sp-four">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8">
+                <h1>SlurmGUI</h1>
+                <div class="image mb-30"><img src="~/Content/images/resource/SlurmGUILOGO.jpeg" alt=""></div>
+            </div>
+            <div class="col-lg-4 sidebar">
+                <div class="broucher">
+                    <a href="#" class="theme-btn"><span class="flaticon-acrobat"></span>Şirket Sunumu <br>Aktif Form</a>
+                </div>
+
+                <div class="request-callback" style="text-align:justify">
+                    <div class="inner-box">
+                        <h4>Nasıl yardımcı olabiliriz?</h4>
+                        <div class="text">Bizimle iletişime geçmek için lütfen online kayıt formundan yada telefon ile doğrudan iletişime geçebilirsiniz.</div>
+                        <div class="phone-number"><span class="flaticon-headphones"></span>(0212) 483 70 33</div>
+                        <div class="link-btn"><a href="@Url.Action("iletisim","Home", new { area =""})" class="theem-btn btn-style-one">Bize ulaşın</a></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="content">
+            <div class="row">
+                <div class="col-lg-8">
+                    <div class="text" style="text-align:justify;">
+                        <p>SchedMD® tarafından geliştirilen, açık kaynaklı ve özgür bir yazılım olan Slurm, GNU/Linux ve Unix benzeri sistemler için geliştirilmiş olup süper bilgisayarlar ve birbirlerine ağ bağlantısı ile bağlı ve senkron çalışan bilgisayarlarda kullanılmaktadır. Ölçeklenebilir yapısı sayesinde bilgisayar sayısına bağlı olmaksızın birçok yapıda kurulup kullanılabilmekte ve verilen işlerin durumu, bilgisayar yük dağılımları gibi birçok durumun gözlenmesini sağlamaktadır.</p>
+                        <p>Mevasis tarından geliştirilen ve son kullanıcıya hitap etmesi hedeflenen SlurmGUI, GNU/Linux işletim sistemlerinde çalışmakta ve kullanıcı ile Slurm arasında arayüz oluşturmaktadır.</p>
+                        <p>SlurmGUI, kullanıcıdan çalıştırılmak üzere aldığı parametreleri, Slurm yazılımına iletmenin yanısıra, Slurm yazılımından aldığı bilgiler ile sistemde çalışmakta olan işlerin takibinin sağlanması ve sistemde çalıştırılan bir işin iptal edilmesi gibi özellikler sunmaktadır.</p>
+                    </div>
+                    <ul class="accordion-box">
+                        <!--Accordion Block-->
+                        <li class="accordion block">
+                            <div class="acc-btn"><div class="icon-outer"><span class="icon icon_plus fa fa-angle-down"></span> <span class="icon icon_minus fa fa-angle-down"></span></div>İş dizini ve E-posta Ayar Ekranı</div>
+                            <div class="acc-content">
+                                <div class="content">
+                                    <div class="text" style="text-align:justify;">
+                                        <div class="col-md-7"><div class="image" style="margin-left:-14px;"><img src="~/Content/images/resource/SlurmGUI1.png" alt=""></div></div>
+                                        <br />
+                                        <br /><p>SlurmGUI aracılığı ile Slurm’e gönderilen işe ait sbatch, girdi ve hata dosylarının nerede bulunacağına dair ekrandır. Ayrıca e-posta adresini girerek, işe dair bildirimlerin alınması sağlanır.</p>
+                                        <p>Bu ekran, “Uygula” butonuna basılması ile birlikte, programı çalıştıran kullanıcının “home” dizininde “.slurm.conf” dosyası oluşturmaktadır. Bir değişiklik yapılması gerektiginde, “.slurm.conf” değiştirilebilir.</p>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <!--Accordion Block-->
+                        <li class="accordion block">
+                            <div class="acc-btn"><div class="icon-outer"><span class="icon icon_plus fa fa-angle-down"></span> <span class="icon icon_minus fa fa-angle-down"></span></div>Modül Ayarları</div>
+                            <div class="acc-content">
+                                <div class="content">
+                                    <div class="text" style="text-align:justify;">
+                                        <p>Sbatch dosyalarında bulunan “module load” anahtar sözcükleri ile işin çalıştırılması için gerekli modüller işleme dahil edilmektedir. Bu aşamada moduller, sistemin kurulumuna göre farklı isimlerde olabilmektedir. Örneğin; bir sistem kurulumunda “abaqus/6.11” isminde bulunan bir modül başka bir kurulum şekliyle “abaqus-6.11” şeklinde isimlenebilmektedir.</p>
+                                        <p>Bu durumu çözebilmek adına, “templates” dizininde bulunan “sbatch” dosyalarının modül ayarları işaretlenmiş ve SlurmGUI içerisinde ayarlanabilir hale getirilmiştir.</p>
+                                        <br />
+                                        <br /><div class="col-md-7"><div class="image" style="margin-left:-14px;"><img src="~/Content/images/resource/SlurmGUI2.1.png" alt=""></div></div>
+                                        <br /><p>Bu ekranda,açılır kutudan, program ismi seçebilir ve programın modül isimlerini, virgül ile ayırarak yazabilirsiniz.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <!--Accordion Block-->
+                        <li class="accordion block">
+                            <div class="acc-btn"><div class="icon-outer"><span class="icon icon_plus fa fa-angle-down"></span> <span class="icon icon_minus fa fa-angle-down"></span></div>İş Ekleme</div>
+                            <div class="acc-content">
+                                <div class="content">
+                                    <div class="text" style="text-align:justify;" >
+                                        <div class="col-md-7"><div class="image" style="margin-left:-14px;"><img src="~/Content/images/resource/SlurmGUI2.png" alt=""></div></div>
+                                        <br />
+                                        <br /><p>
+                                            “İş Ekle”  sekmesinde bulunan bu ekran ile Slurm kuyruğuna iş gönderilebilmektedir.
+                                            Bu ekranda görüntülenen, “Hesap adı” ve “Kuyruk ismi” belirtilen açılır menü, programı çalıştıran kullanıcıya ait, hesap adları ve kuyruk isimlerini barındırmaktadır. Bu açılır menüler düzenlenilememektedir. Bu alanların değişmesi gerekiyor ise lütfen sistem yöneticiniz ile Slurm hesabınız hakkında iletişime geçiniz.
+                                        </p>
+                                        <p>“Başlat” butonuna basılması ile birlikte, verdiğiniz bilgiler gözden geçirilmektedir. Bir kusur tespit edilmemesi durumunda, verdiğiniz girdi dosyası/dosyaları daha önce “İş Dizini” olarak belirttiğiniz dizine kopyalanmakta ve bir “sbatch” dosyası oluşurulup çalıştırılmakta ve iş Slurm’e iletilmektedir.</p>
+                                        <p>Verdiğiniz bilgilerde hata olması durumunda:</p>
+                                        <p>"Eğer girdilerinizdeki hata, yazım hatası ise(örneğin, “core sayısı” alanına harf girmek), bu“İş Ekle” ekranının sol üst köşesinde belirtilecektir. Bu aşamada girdilerinize dair hiçbir dosya oluşturulmayacak ve işlem yapılmayacaktır."</p>
+                                        <p>"Eğer girdilerinizdeki hata Slurm programında çalışırken meydana gelecek bir hata ise, işiniz ilk aşamada onay alır ve Slurm’e iletilir ve bir hata kodu dönmez. Ancak iş bir süre sonra “FAILED” durumuna gelecektir. Bunu “İşler” sekmesinden görüntüleyebilirsiniz. Bu aşamada girdilerinize dair dosyalar oluşturulmuş olacaktır."</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <!--Accordion Block-->
+                        <li class="accordion block">
+                            <div class="acc-btn"><div class="icon-outer"><span class="icon icon_plus fa fa-angle-down"></span> <span class="icon icon_minus fa fa-angle-down"></span></div>İş Görüntüleme</div>
+                            <div class="acc-content">
+                                <div class="content">
+                                    <div class="text" style="text-align:justify;">
+                                        <div class="col-md-7"><div class="image" style="margin-left:-14px; "><img src="~/Content/images/resource/SlurmGUI3.png" alt=""></div></div>
+                                        <br />
+                                        <br /><p>Bu sekmede, daha öncesinde Slurm’e SlurmGUI aracılığı ile yada direk Slurm’e komutlar ile iletilmiş işler görüntülenmektedir.</p>
+                                        <p>
+                                            Bu sekmede görüntülemenin yanısıra, çalışan işlerin iptali de gerçekleştirilebilmektedir.
+                                            İptal etme işlemi için;
+                                        </p>
+                                        <p>
+                                            <ul>
+                                                <li> 1.	Liste halinde görüntülenen işler arasında iptal etmek istediğinizin üzerine tıklayınız,</li>
+                                                <li> 2.	“İptal Et” butonuna tıklayınız,</li>
+                                                <li>3.	Son olarak açılan yeni pencerede işin iptaline dair onay veriniz</li>
+                                            </ul>
+                                        </p>
+                                        <p>	Onayınızla beraber iptal etmek istediğiniz işe dair bilgiler ve iptal isteğiniz Slurm’e iletilecek ve iptal işlemi gerçekleşmiş olacaktır. İptal ettiğiniz işleri, yine işler ekranından görüntüleyebilirsiniz.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+

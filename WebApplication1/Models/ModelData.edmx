@@ -1,0 +1,402 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="mevasisModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="Haberler">
+          <Key>
+            <PropertyRef Name="HaberId" />
+          </Key>
+          <Property Name="HaberId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Baslik" Type="varchar(max)" Nullable="false" />
+          <Property Name="Icerik" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="Foto" Type="varchar(max)" />
+          <Property Name="Tarih" Type="datetime" Nullable="false" />
+          <Property Name="UyeId" Type="int" Nullable="false" />
+          <Property Name="KategoriId" Type="int" Nullable="false" />
+          <Property Name="seourl" Type="varchar" MaxLength="5000" />
+        </EntityType>
+        <EntityType Name="Hizmetlerimiz">
+          <Key>
+            <PropertyRef Name="HizmetId" />
+          </Key>
+          <Property Name="HizmetId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Baslik" Type="varchar(max)" />
+          <Property Name="Icerik" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="Foto" Type="varchar(max)" />
+          <Property Name="seourl" Type="varchar" MaxLength="5000" />
+        </EntityType>
+        <EntityType Name="Kategori">
+          <Key>
+            <PropertyRef Name="KategoriId" />
+          </Key>
+          <Property Name="KategoriId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="KategoriAdi" Type="nvarchar" MaxLength="500" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Projeler">
+          <Key>
+            <PropertyRef Name="ProjeId" />
+          </Key>
+          <Property Name="ProjeId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Baslik" Type="varchar(max)" Nullable="false" />
+          <Property Name="Icerik" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="Foto" Type="varchar(max)" Nullable="false" />
+          <Property Name="seourl" Type="varchar" MaxLength="5000" />
+        </EntityType>
+        <EntityType Name="Referanslar">
+          <Key>
+            <PropertyRef Name="ReferansId" />
+          </Key>
+          <Property Name="ReferansId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Baslik" Type="varchar(max)" />
+          <Property Name="Icerik" Type="nvarchar(max)" />
+          <Property Name="Foto" Type="varchar(max)" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Urunler">
+          <Key>
+            <PropertyRef Name="UrunId" />
+          </Key>
+          <Property Name="UrunId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Baslik" Type="varchar(max)" Nullable="false" />
+          <Property Name="KısaIcerik" Type="varchar(max)" Nullable="false" />
+          <Property Name="Icerik" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="Foto" Type="varchar(max)" Nullable="false" />
+          <Property Name="seourl" Type="varchar" MaxLength="5000" />
+        </EntityType>
+        <EntityType Name="Uye">
+          <Key>
+            <PropertyRef Name="UyeId" />
+          </Key>
+          <Property Name="UyeId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="AdSoyad" Type="nvarchar" MaxLength="500" Nullable="false" />
+          <Property Name="Email" Type="nvarchar" MaxLength="50" />
+          <Property Name="YetkiId" Type="int" Nullable="false" />
+          <Property Name="Sifre" Type="nvarchar" MaxLength="50" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Yetki">
+          <Key>
+            <PropertyRef Name="YetkiId" />
+          </Key>
+          <Property Name="YetkiId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Yetki" Type="nvarchar" MaxLength="50" Nullable="false" />
+        </EntityType>
+        <Association Name="FK_Haberler_Kategori">
+          <End Role="Kategori" Type="Self.Kategori" Multiplicity="1" />
+          <End Role="Haberler" Type="Self.Haberler" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Kategori">
+              <PropertyRef Name="KategoriId" />
+            </Principal>
+            <Dependent Role="Haberler">
+              <PropertyRef Name="KategoriId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Haberler_Uye">
+          <End Role="Uye" Type="Self.Uye" Multiplicity="1" />
+          <End Role="Haberler" Type="Self.Haberler" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Uye">
+              <PropertyRef Name="UyeId" />
+            </Principal>
+            <Dependent Role="Haberler">
+              <PropertyRef Name="UyeId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Uye_Yetki">
+          <End Role="Yetki" Type="Self.Yetki" Multiplicity="1" />
+          <End Role="Uye" Type="Self.Uye" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Yetki">
+              <PropertyRef Name="YetkiId" />
+            </Principal>
+            <Dependent Role="Uye">
+              <PropertyRef Name="YetkiId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="mevasisModelStoreContainer">
+          <EntitySet Name="Haberler" EntityType="Self.Haberler" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Hizmetlerimiz" EntityType="Self.Hizmetlerimiz" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Kategori" EntityType="Self.Kategori" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Projeler" EntityType="Self.Projeler" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Referanslar" EntityType="Self.Referanslar" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Urunler" EntityType="Self.Urunler" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Uye" EntityType="Self.Uye" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Yetki" EntityType="Self.Yetki" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK_Haberler_Kategori" Association="Self.FK_Haberler_Kategori">
+            <End Role="Kategori" EntitySet="Kategori" />
+            <End Role="Haberler" EntitySet="Haberler" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Haberler_Uye" Association="Self.FK_Haberler_Uye">
+            <End Role="Uye" EntitySet="Uye" />
+            <End Role="Haberler" EntitySet="Haberler" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Uye_Yetki" Association="Self.FK_Uye_Yetki">
+            <End Role="Yetki" EntitySet="Yetki" />
+            <End Role="Uye" EntitySet="Uye" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="mevasisModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityContainer Name="mevasisEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Haberlers" EntityType="mevasisModel.Haberler" />
+          <EntitySet Name="Hizmetlerimizs" EntityType="mevasisModel.Hizmetlerimiz" />
+          <EntitySet Name="Kategoris" EntityType="mevasisModel.Kategori" />
+          <EntitySet Name="Projelers" EntityType="mevasisModel.Projeler" />
+          <EntitySet Name="Referanslars" EntityType="mevasisModel.Referanslar" />
+          <EntitySet Name="Urunlers" EntityType="mevasisModel.Urunler" />
+          <EntitySet Name="Uyes" EntityType="mevasisModel.Uye" />
+          <EntitySet Name="Yetkis" EntityType="mevasisModel.Yetki" />
+          <AssociationSet Name="FK_Haberler_Kategori" Association="mevasisModel.FK_Haberler_Kategori">
+            <End Role="Kategori" EntitySet="Kategoris" />
+            <End Role="Haberler" EntitySet="Haberlers" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Haberler_Uye" Association="mevasisModel.FK_Haberler_Uye">
+            <End Role="Uye" EntitySet="Uyes" />
+            <End Role="Haberler" EntitySet="Haberlers" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Uye_Yetki" Association="mevasisModel.FK_Uye_Yetki">
+            <End Role="Yetki" EntitySet="Yetkis" />
+            <End Role="Uye" EntitySet="Uyes" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="Haberler">
+          <Key>
+            <PropertyRef Name="HaberId" />
+          </Key>
+          <Property Name="HaberId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Baslik" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="Icerik" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Foto" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="Tarih" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="UyeId" Type="Int32" Nullable="false" />
+          <Property Name="KategoriId" Type="Int32" Nullable="false" />
+          <Property Name="seourl" Type="String" MaxLength="5000" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="Kategori" Relationship="mevasisModel.FK_Haberler_Kategori" FromRole="Haberler" ToRole="Kategori" />
+          <NavigationProperty Name="Uye" Relationship="mevasisModel.FK_Haberler_Uye" FromRole="Haberler" ToRole="Uye" />
+        </EntityType>
+        <EntityType Name="Hizmetlerimiz">
+          <Key>
+            <PropertyRef Name="HizmetId" />
+          </Key>
+          <Property Name="HizmetId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Baslik" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="Icerik" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Foto" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="seourl" Type="String" MaxLength="5000" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="Kategori">
+          <Key>
+            <PropertyRef Name="KategoriId" />
+          </Key>
+          <Property Name="KategoriId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="KategoriAdi" Type="String" Nullable="false" MaxLength="500" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="Haberlers" Relationship="mevasisModel.FK_Haberler_Kategori" FromRole="Kategori" ToRole="Haberler" />
+        </EntityType>
+        <EntityType Name="Projeler">
+          <Key>
+            <PropertyRef Name="ProjeId" />
+          </Key>
+          <Property Name="ProjeId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Baslik" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="Icerik" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Foto" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="seourl" Type="String" MaxLength="5000" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="Referanslar">
+          <Key>
+            <PropertyRef Name="ReferansId" />
+          </Key>
+          <Property Name="ReferansId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Baslik" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="Icerik" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Foto" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="Urunler">
+          <Key>
+            <PropertyRef Name="UrunId" />
+          </Key>
+          <Property Name="UrunId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Baslik" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="KısaIcerik" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="Icerik" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Foto" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="seourl" Type="String" MaxLength="5000" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="Uye">
+          <Key>
+            <PropertyRef Name="UyeId" />
+          </Key>
+          <Property Name="UyeId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="AdSoyad" Type="String" Nullable="false" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="Email" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="YetkiId" Type="Int32" Nullable="false" />
+          <Property Name="Sifre" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="Haberlers" Relationship="mevasisModel.FK_Haberler_Uye" FromRole="Uye" ToRole="Haberler" />
+          <NavigationProperty Name="Yetki" Relationship="mevasisModel.FK_Uye_Yetki" FromRole="Uye" ToRole="Yetki" />
+        </EntityType>
+        <EntityType Name="Yetki">
+          <Key>
+            <PropertyRef Name="YetkiId" />
+          </Key>
+          <Property Name="YetkiId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Yetki1" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="Uyes" Relationship="mevasisModel.FK_Uye_Yetki" FromRole="Yetki" ToRole="Uye" />
+        </EntityType>
+        <Association Name="FK_Haberler_Kategori">
+          <End Type="mevasisModel.Kategori" Role="Kategori" Multiplicity="1" />
+          <End Type="mevasisModel.Haberler" Role="Haberler" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Kategori">
+              <PropertyRef Name="KategoriId" />
+            </Principal>
+            <Dependent Role="Haberler">
+              <PropertyRef Name="KategoriId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Haberler_Uye">
+          <End Type="mevasisModel.Uye" Role="Uye" Multiplicity="1" />
+          <End Type="mevasisModel.Haberler" Role="Haberler" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Uye">
+              <PropertyRef Name="UyeId" />
+            </Principal>
+            <Dependent Role="Haberler">
+              <PropertyRef Name="UyeId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Uye_Yetki">
+          <End Type="mevasisModel.Yetki" Role="Yetki" Multiplicity="1" />
+          <End Type="mevasisModel.Uye" Role="Uye" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Yetki">
+              <PropertyRef Name="YetkiId" />
+            </Principal>
+            <Dependent Role="Uye">
+              <PropertyRef Name="YetkiId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="mevasisModelStoreContainer" CdmEntityContainer="mevasisEntities">
+          <EntitySetMapping Name="Haberlers">
+            <EntityTypeMapping TypeName="mevasisModel.Haberler">
+              <MappingFragment StoreEntitySet="Haberler">
+                <ScalarProperty Name="seourl" ColumnName="seourl" />
+                <ScalarProperty Name="KategoriId" ColumnName="KategoriId" />
+                <ScalarProperty Name="UyeId" ColumnName="UyeId" />
+                <ScalarProperty Name="Tarih" ColumnName="Tarih" />
+                <ScalarProperty Name="Foto" ColumnName="Foto" />
+                <ScalarProperty Name="Icerik" ColumnName="Icerik" />
+                <ScalarProperty Name="Baslik" ColumnName="Baslik" />
+                <ScalarProperty Name="HaberId" ColumnName="HaberId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Hizmetlerimizs">
+            <EntityTypeMapping TypeName="mevasisModel.Hizmetlerimiz">
+              <MappingFragment StoreEntitySet="Hizmetlerimiz">
+                <ScalarProperty Name="seourl" ColumnName="seourl" />
+                <ScalarProperty Name="Foto" ColumnName="Foto" />
+                <ScalarProperty Name="Icerik" ColumnName="Icerik" />
+                <ScalarProperty Name="Baslik" ColumnName="Baslik" />
+                <ScalarProperty Name="HizmetId" ColumnName="HizmetId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Kategoris">
+            <EntityTypeMapping TypeName="mevasisModel.Kategori">
+              <MappingFragment StoreEntitySet="Kategori">
+                <ScalarProperty Name="KategoriAdi" ColumnName="KategoriAdi" />
+                <ScalarProperty Name="KategoriId" ColumnName="KategoriId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Projelers">
+            <EntityTypeMapping TypeName="mevasisModel.Projeler">
+              <MappingFragment StoreEntitySet="Projeler">
+                <ScalarProperty Name="seourl" ColumnName="seourl" />
+                <ScalarProperty Name="Foto" ColumnName="Foto" />
+                <ScalarProperty Name="Icerik" ColumnName="Icerik" />
+                <ScalarProperty Name="Baslik" ColumnName="Baslik" />
+                <ScalarProperty Name="ProjeId" ColumnName="ProjeId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Referanslars">
+            <EntityTypeMapping TypeName="mevasisModel.Referanslar">
+              <MappingFragment StoreEntitySet="Referanslar">
+                <ScalarProperty Name="Foto" ColumnName="Foto" />
+                <ScalarProperty Name="Icerik" ColumnName="Icerik" />
+                <ScalarProperty Name="Baslik" ColumnName="Baslik" />
+                <ScalarProperty Name="ReferansId" ColumnName="ReferansId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Urunlers">
+            <EntityTypeMapping TypeName="mevasisModel.Urunler">
+              <MappingFragment StoreEntitySet="Urunler">
+                <ScalarProperty Name="seourl" ColumnName="seourl" />
+                <ScalarProperty Name="Foto" ColumnName="Foto" />
+                <ScalarProperty Name="Icerik" ColumnName="Icerik" />
+                <ScalarProperty Name="KısaIcerik" ColumnName="KısaIcerik" />
+                <ScalarProperty Name="Baslik" ColumnName="Baslik" />
+                <ScalarProperty Name="UrunId" ColumnName="UrunId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Uyes">
+            <EntityTypeMapping TypeName="mevasisModel.Uye">
+              <MappingFragment StoreEntitySet="Uye">
+                <ScalarProperty Name="Sifre" ColumnName="Sifre" />
+                <ScalarProperty Name="YetkiId" ColumnName="YetkiId" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="AdSoyad" ColumnName="AdSoyad" />
+                <ScalarProperty Name="UyeId" ColumnName="UyeId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Yetkis">
+            <EntityTypeMapping TypeName="mevasisModel.Yetki">
+              <MappingFragment StoreEntitySet="Yetki">
+                <ScalarProperty Name="Yetki1" ColumnName="Yetki" />
+                <ScalarProperty Name="YetkiId" ColumnName="YetkiId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

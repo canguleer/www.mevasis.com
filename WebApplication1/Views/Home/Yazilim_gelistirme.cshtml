@@ -1,0 +1,128 @@
+﻿
+@{
+    ViewBag.Title = "Yazilim_gelistirme";
+    Layout = "~/Views/Shared/Layout.cshtml";
+}
+
+<section class="project-details ">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8">
+                <h1>Yazılım Geliştirme</h1>
+              
+                <div class="text mb-30" style="text-align:justify;">
+                    Yapmış olduğumuz işleri zamanında, eksiksiz ve ücretsiz lisanslara sahip yazılım teknolojileri ile  hayata geçirdiğimiz için, en büyük başarılarımızı memnun müşterilerimiz olarak görüyoruz. Müşteri odaklı çalışmamızın yanında her bir projemiz bizim için de bir başarı unsurudur.
+                    <br />
+                    <br />Sektöre web, akademik ve kurumsal alanlarda uygulama geliştiren tek firma olmamızın verdiği güven ile müşterilerimize en iyi hizmeti iletmeyi hedefliyoruz.
+                </div>
+            </div>
+            <div class="col-lg-4 sidebar">
+                <div class="broucher">
+                    <a href="#" class="theme-btn"><span class="flaticon-acrobat"></span>Şirket Sunumu <br>Aktif Form</a>
+                </div>
+
+                <div class="request-callback" style="text-align:justify">
+                    <div class="inner-box">
+                        <h4>Nasıl yardımcı olabiliriz?</h4>
+                        <div class="text" style="text-align:justify;">Bizimle iletişime geçmek için lütfen online kayıt formundan yada telefon ile doğrudan iletişime geçebilirsiniz.</div>
+                        <div class="phone-number"><span class="flaticon-headphones"></span>(0212) 483 70 33</div>
+                        <div class="link-btn"><a href="@Url.Action("iletisim","Home", new { area =""})" class="theem-btn btn-style-one">Bize ulaşın</a></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="image mb-30"><img src="~/Content/images/resource/yazılımG.png" alt=""></div>
+        <div>
+            <h3>Kullandığımız Teknolojiler</h3>
+            <div class="text mb-70">
+                Üstlendiğimiz misyon gereği Açık Kaynak yazılımlar ile müşterilerimizin ihtiyaçlarını karşılıyoruz. Gelişen teknoloji ile birlikte yazılım teknolojiside sürekli değişmektedir. Kullandığımız belli başlı teknolojiler;
+            </div>
+
+            <ul class="list-style-two mb-30">
+                <li>Java</li>
+                <li>Ruby</li>
+                <li>Php</li>
+                <li>Python</li>
+                <li>Js</li>
+                <li>git</li>
+                <li>Redmine</li>
+            </ul>
+        </div>
+        <h3>Yazılım Yaşam Döngümüz</h3>
+        <ul class="accordion-box">
+            <!--Accordion Block-->
+            <li class="accordion block">
+                <div class="acc-btn active"><div class="icon-outer"><span class="icon icon_plus fa fa-angle-down"></span> <span class="icon icon_minus fa fa-angle-down"></span></div>Fikir</div>
+                <div class="acc-content current">
+                    <div class="content">
+                        <div class="text" style="text-align:justify;">
+                            Yazılım yaşam döngümüzün ilk aşamasını oluşturur. Bu aşamada müşterimizin temel ihtiyaçları belirlenir, proje için maliyetlerin ve sistemin yararlarının tanımlanması çalışmaları yapılır.
+                        </div>
+                    </div>
+                </div>
+            </li>
+
+            <!--Accordion Block-->
+            <li class="accordion block">
+                <div class="acc-btn"><div class="icon-outer"><span class="icon icon_plus fa fa-angle-down"></span> <span class="icon icon_minus fa fa-angle-down"></span></div>Analiz</div>
+                <div class="acc-content">
+                    <div class="content">
+                        <div class="text" style="text-align:justify;">
+                            Yazılım yaşam döngümüzün bu aşamasının amacı müşterimizin kullandığı sistemin işlevlerini ve kesin gereksinimleri açıklığa kavuşturmak ve sonucunda bunları belgelendirmektir. Mevasis olarak bu aşamada müşteri, yazılım mühendisi, sistem analisti, iş analisti, ürün yöneticisi  gibi rollerin bir araya getirerek sürece devam ediyoruz. İhtiyaçların net olmadığı durumlarda yazılım mühendisi ve müşteri arasında iletişim ve birlikte çalışmanın çok daha fazla olması gerekir. Çeşitli yazılım geliştirme metodolojilerinde bu aşamada kullanım belgeleri ve test plan belgeleri de oluşturulabilir.
+                        </div>
+                    </div>
+                </div>
+            </li>
+
+            <!--Accordion Block-->
+            <li class="accordion block">
+                <div class="acc-btn"><div class="icon-outer"><span class="icon icon_plus fa fa-angle-down"></span> <span class="icon icon_minus fa fa-angle-down"></span></div>Tasarım</div>
+                <div class="acc-content">
+                    <div class="content">
+
+                        <div class="wpb_wrapper">
+                            <div class="text" style="text-align:justify;">
+                                Yazılım yaşam döngümüzün ilk iki aşamasının tamamlanmasıyla beraber sistem bu aşamaya başlıyoruz. Bu aşamada müşterinin gereksinim ve isteklerini karşılamak üzere yazılım ürününün özellikleri, yetenekleri, ve arayüzlerinin belirlenmesi işlemlerini gerçekleştiriyoruz.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </li>
+
+            <!--Accordion Block-->
+            <li class="accordion block">
+                <div class="acc-btn"><div class="icon-outer"><span class="icon icon_plus fa fa-angle-down"></span> <span class="icon icon_minus fa fa-angle-down"></span></div>Geliştirme</div>
+                <div class="acc-content">
+                    <div class="content">
+                        <div class="text" style="text-align:justify;">
+                            Buraya kadar olan adımların tamamlanması ile aşamasının belirli bir olgunluğa ulaşmasıyla birlikte Geliştirme (Kodlama) aşaması başlar. Müşteriye teslim edilecek olan ürünümüzün programlama aşamasıdır. Bu aşamada açık kaynak çözümler kullanarak müşterimize fazladan lisans maliyetlerinin yansımasını önüne geçiyoruz.
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <!--Accordion Block-->
+            <li class="accordion block">
+                <div class="acc-btn"><div class="icon-outer"><span class="icon icon_plus fa fa-angle-down"></span> <span class="icon icon_minus fa fa-angle-down"></span></div>Teslim</div>
+                <div class="acc-content">
+                    <div class="content">
+                        <div class="text" style="text-align:justify;">
+                            Geliştirme süreci sonrası tarafımızdan yapılan tüm test aşamaları tamamlandıktan sonra yazılım ürünün sahaya teslim edilebilir bir versiyonu çıkartılır ve bu aşamada müşterimize teslim gerçekleştirilir. Ürünün teslimi sırasında hazırlanmış olan belgelendirme de teslim edilecektir.
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <!--Accordion Block-->
+            <li class="accordion block">
+                <div class="acc-btn"><div class="icon-outer"><span class="icon icon_plus fa fa-angle-down"></span> <span class="icon icon_minus fa fa-angle-down"></span></div>Destek</div>
+                <div class="acc-content">
+                    <div class="content">
+                        <div class="text" style="text-align:justify;">
+                            Teslim aşaması ile birlikte aynı anda bu aşama da başlar. Hata giderici, önleyici, altyapıyı iyileştirici, ürüne yeni özellikler ekletici gibi farklı bakım faaliyetleri mevcuttur. Bu faliyetler işin başlangıcında imzalanmış olan anlaşma altında açık olarak belirtilmiştir.
+                        </div>
+                    </div>
+                </div>
+            </li>
+        </ul>
+        <!-- end -->
+    </div>
+</section>

@@ -1,0 +1,78 @@
+﻿
+@{
+    ViewBag.Title = "Slurm";
+    Layout = "~/Views/Shared/Layout.cshtml";
+}
+
+<section class="project-details sp-four">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8">
+                <div class="image mb-30" style="max-width:55%;"><img src="~/Content/images/resource/maxresdefault.jpg" alt=""></div>               
+            </div>
+            <div class="col-lg-4 sidebar">
+                <div class="broucher">
+                    <a href="#" class="theme-btn"><span class="flaticon-acrobat"></span>Şirket Sunumu <br>Aktif Form</a>
+                </div>
+                <div class="request-callback" style="text-align:justify">
+                    <div class="inner-box">
+                        <h4>Nasıl yardımcı olabiliriz?</h4>
+                        <div class="text">Bizimle iletişime geçmek için lütfen online kayıt formundan yada telefon ile doğrudan iletişime geçebilirsiniz.</div>
+                        <div class="phone-number"><span class="flaticon-headphones"></span>(0212) 483 70 33</div>
+                        <div class="link-btn"><a href="@Url.Action("iletisim","Home", new { area =""})" class="theem-btn btn-style-one">Bize ulaşın</a></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+       
+        <div class="content">
+            <div class="row">
+                <div class="col-lg-8" style="margin-bottom:0px;">
+                    <h1>SLURM</h1>
+                    <div class="text mb-30">
+                        <br />Slurm, büyük veya küçük ayırmaksızın Linux Clusterlar için açık kaynak kodlu, hataya dayanıklı ve yüksek ölçeklenebilir cluster yönetimi ve iş planlama sistemidir. Slurm, çalışması için çekirdek değişiklikler yapmayı gerektirmemesinden dolayı yazılım uyumsuzulukları sorunları oluşturmaz. Slurm iş yükü planlıyıcısı olarak üç temel fonksiyona sahiptir.
+                        <br />
+                        <br />1. Kullanıcılara işleri yapabilmeleri için belirli bir süre özel ve / veya özel olmayan erişim kaynaklarına (hesaplama nodelarına) erişim sağlamak,
+                        <br />2. Kullanıcılara iş yapmaları için tahsis edilen nodelar üzerinde işi başlatmak, yürütmek ve izlemek
+                        <br />3. Hesaplama kaynakları üzerinde bekleyen bir iş kuyruğunu yönetir.
+                        <br />
+                        <br />İsteğe bağlı olarak slurm üzerinde bazı eklentiler kullanılabilir. Bunlar;
+                        <br />
+                        <br />
+                        <ul class="list-style-six mb-30">
+                            <li>Muhasebe</li>
+                            <li>Gelişmiş kaynak rezervasyonu</li>
+                            <li>Paralel işler için zaman paylaşımı</li>
+                            <li>Dolgu planlaması, topoloji ile optimize edilmiş kaynak seçimi, kullanıcı veya banka hesabına göre kaynak sınırları ve karmaşık çok faktörlü iş önceliği algoritmaları için kullanılabilir.</li>
+                            <li>Topoloji ile optimize edilmiş kaynak seçimi,</li>
+                            <li>Kullanıcı veya hesaba göre kaynak sınırları,</li>
+                            <li>Özel faktörlü iş önceliklendirme algoritmaları.</li>
+                        </ul>
+
+                        <br />Mimari
+                        <br />
+                        <div class="col-lg-8">
+                            <div class="image mb-30"><img src="~/Content/images/resource/mimari.png" alt=""></div>
+
+                        </div>
+                        <br />Slurm’un kaynakları ve çalışmaları izlemek için merkezi bir yöneticisi vardır. Mimarinize göre arıza durumunda bu sorumlulukları üstlenmek için bir yedekleme yöneticisi de yapılandırabilirsiniz. Bu şekilde cluster üzerinde kesintiye uğramadan işleriniz çalışmaya devam edecektir. Her bir hesaplama sunucususu, bir uzak shell ile karşılaştırılabilen işi beklten, yürüten, durumu değiştiren ve daha fazla iş bekleten bir slurmd daemonuna sahiptir. Slurmd istemcileri, hataya dayanıklı hiyerarşik iletişim sağlar. Tek bir veritabanında birden fazla Slurm tarafından yönetilen küme için kullanım ve kullanıcı istatistiklerini kaydetmek için kullanılabilen isteğe bağlı bir slurmdbd (Slurm Veri Tabanı Daemonu) vardır. Kullanıcılar için ise 5 komut setinden oluşan kullanımı vardır.
+                        <br />
+                        <ul class="list-style-six mb-30">
+                            <li>srun : İşleri başlatır</li>
+                            <li>scancel : Sıraya alınan veya çalışan işleri sonlandırır</li>
+                            <li>sinfo : Sistem durumunu bildirir</li>
+                            <li>squeue : İşlerin durumunhu rapor eder</li>
+                            <li>saact : Çalışan veya tamamlanmış olan işler ve iş adımları hakkında bilgi verir.</li>
+                            <li>Smap / sview: Ağ topolojisi de dahil olmak üzere sistem ve iş durumunu grafik olarak raporlar</li>
+                            <li>scontrol : Clusterdaki yapılandırma ve durum bilgilerini izlemek ve / veya değiştirmek için Admin tarafından kullanılır.</li>
+                            <li>Saactmgr : Veritabanını yönetmek için Admin tarafından kullanılır.</li>
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+

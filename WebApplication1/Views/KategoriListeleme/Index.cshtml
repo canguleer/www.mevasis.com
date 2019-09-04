@@ -1,0 +1,208 @@
+﻿@model IEnumerable<MevaPro.Models.Haberler>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/Layout.cshtml";
+}
+
+<!-- Our Projects -->
+<section class="project-section sp-two">
+    <div class="container">
+        <div class="mixitup-gallery">
+            <!--Filter-->
+            <div class="filters clearfix">
+
+                @{
+                    Html.RenderAction("KategorilerPartial", "Home");
+
+                }
+
+
+            </div>
+            <div class="filter-list row clearfix">
+                @*Yeni Eklenecek Haber Bu Satırın Altına Eklenecektir.*@
+                @*Örnek Haber*@
+                @*<div class="project-block-two mix Business Energy al col-lg-4 col-md-6">
+                        <div class="inner-box">
+                            <div class="image">
+                                <img src="~/Content/images/resource/MevasisBilisimKonf1.jpeg" alt="">---------Haber Resmi-------
+                            </div>
+                            <div class="lower-box">
+                                <div class="caption">
+                                    <h4><a href="project-details.html">--------Haber Başlığı------</a></h4>
+                                    <div class="text" style="text-align:justify;">----------------Haber Tarihi---------------</div>
+                                    <div class="link-btn"><a href="@Url.Action("--------Haber Linki--------","News", new { area =""})" class="theme-btn btn-style-one">Daha Fazla Oku</a></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>*@
+                <!-- project block --> @*23-26 Eylül 2018 Haber*@
+                @*--------Tarih sırasına göre sıralanmıştır-----*@
+                @*<div class="project-block-two mix Business Energy al col-lg-4 col-md-6">
+                        <div class="inner-box">
+                            <div class="image">
+                                <img src="~/Content/images/resource/MevasisBilisimKonf1.jpeg" alt="">
+                            </div>
+                            <div class="lower-box">
+                                <div class="caption">
+                                    <h4><a href="project-details.html">5. Uluslararası Hesaplamalı Bilimler ve Teknolojileri Konferansına Katıldık</a></h4>
+                                    <div class="text" style="text-align:justify;">23-26 Eylül,2018</div>
+                                    <div class="link-btn"><a href="@Url.Action("besinci_uluslararasi_hesaplamali_bilimler_ve_teknolojileri_konferansina_katildiks","News", new { area =""})" class="theme-btn btn-style-one">Daha Fazla Oku</a></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- project block -->
+                    <div class="project-block-two mix Consumer al col-lg-4 col-md-6">
+                        <div class="inner-box">
+                            <div class="image">
+                                <img src="~/Content/images/resource/VeeamVmsp.jpeg" alt="">
+                            </div>
+                            <div class="lower-box">
+                                <div class="caption">
+                                    <h4><a href="project-details.html">Veeam Propartner Olduk</a></h4>
+                                    <div class="text" style="text-align:justify;">Kasım 13, 2017</div>
+                                    <div class="link-btn"><a href="@Url.Action("Veeam_Propartner_Olduk","News", new { area =""})" class="theme-btn btn-style-one">Daha Fazla Oku</a></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- project block -->
+                    <div class="project-block-two mix Finance al col-lg-4 col-md-6">
+                        <div class="inner-box">
+                            <div class="image">
+                                <img src="~/Content/images/resource/hp_business_partner_logo.png" alt="">
+                            </div>
+                            <div class="lower-box">
+                                <div class="caption">
+                                    <h4><a href="project-details.html">HPE Business Partner Olduk</a></h4>
+                                    <div class="text" style="text-align:justify;">23 Ağustos, 2017</div>
+                                    <div class="link-btn"><a href="@Url.Action("HPE_Business_Partner_Olduk","News", new { area =""})" class="theme-btn btn-style-one">Daha Fazla Oku</a></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- project block -->
+                    <div class="project-block-two mix al col-lg-4 col-md-6">
+                        <div class="inner-box">
+                            <div class="image">
+                                <img src="~/Content/images/resource/iu.jpg" alt="">
+                            </div>
+                            <div class="lower-box">
+                                <div class="caption">
+                                    <h4><a href="project-details.html">3G Günleri Geleneksel Girişim Gelişim Günleri</a></h4>
+                                    <div class="text" style="text-align:justify;">Ağustos 12, 2017</div>
+                                    <div class="link-btn"><a href="@Url.Action("UcG_Günleri_Geleneksel_Girisim_Gelisim_Gunleri","News", new { area =""})" class="theme-btn btn-style-one">Daha Fazla Oku</a></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- project block -->
+                    <div class="project-block-two mix Consumer Finance al col-lg-4 col-md-6">
+                        <div class="inner-box">
+                            <div class="image">
+                                <img src="~/Content/images/resource/Screen-Shot-2017-08-12-at-19.23.08.png" alt="">
+                            </div>
+                            <div class="lower-box">
+                                <div class="caption">
+                                    <h4><a href="project-details.html">Harran Üniversitesinde 4. Bilişim Günlerine Katıldık</a></h4>
+                                    <div class="text" style="text-align:justify;">Ağustos 12, 2017</div>
+                                    <div class="link-btn"><a href="@Url.Action("Harran_universitesinde_dorduncu_bilisim_Gunlerine_katildik","News", new { area =""})" class="theme-btn btn-style-one">Daha Fazla Oku</a></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>*@
+                <!-- project block -->
+                @*<div class="project-block-two mix Business al col-lg-4 col-md-6">
+                        <div class="inner-box">
+                            <div class="image">
+                                <img src="~/Content/images/resource/harran.jpg" alt="">
+                            </div>
+                            <div class="lower-box">
+                                <div class="caption">
+                                    <h4><a href="project-details.html">Harran HPC Kapasite Geliştirme Eğitimi</a></h4>
+                                    <div class="text" style="text-align:justify;">1-3 Temmuz, 2017</div>
+                                    <div class="link-btn"><a href="@Url.Action("Harran_HPC_Kapasite_Gelistirme_Eğitimi","News", new { area =""})" class="theme-btn btn-style-one">Daha Fazla Oku</a></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- project block -->
+                    <div class="project-block-two mix Business Energy al col-lg-4 col-md-6">
+                        <div class="inner-box">
+                            <div class="image">
+                                <img src="~/Content/images/resource/bilmok.png" alt="">
+                            </div>
+                            <div class="lower-box">
+                                <div class="caption">
+                                    <h4><a href="project-details.html">Konya’da Düzenlenen Bilmök 2017’ye Katıldık</a></h4>
+                                    <div class="text" style="text-align:justify;">Mart 6, 2017</div>
+                                    <div class="link-btn"><a href="@Url.Action("Konyada_duzenlenen_Bilmok_ikibinonyediye_katildik","News", new { area =""})" class="theme-btn btn-style-one">Daha Fazla Oku</a></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- project block -->
+                    <div class="project-block-two mix Business Energy al col-lg-4 col-md-6">
+                        <div class="inner-box">
+                            <div class="image">
+                                <img src="~/Content/images/resource/aksaray.jpeg" alt="">
+                            </div>
+                            <div class="lower-box">
+                                <div class="caption">
+                                    <h4><a href="project-details.html">19. Akademik Bilişim Kongresine Katıldık</a></h4>
+                                    <div class="text" style="text-align:justify;">Şubat 11, 2017</div>
+                                    <div class="link-btn"><a href="@Url.Action("ondukuzuncu_akademik_bilisim_kongresine_katildik","News", new { area =""})" class="theme-btn btn-style-one">Daha Fazla Oku</a></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- project block -->
+                    <div class="project-block-two mix Business Energy al col-lg-4 col-md-6">
+                        <div class="inner-box">
+                            <div class="image">
+                                <img src="~/Content/images/resource/ab17-.jpeg" alt="">
+                            </div>
+                            <div class="lower-box">
+                                <div class="caption">
+                                    <h4><a href="project-details.html">19. Akademik Bilişim Kongresi Öncesinde Eğitim verdik</a></h4>
+                                    <div class="text" style="text-align:justify;">Şubat 11, 2017</div>
+                                    <div class="link-btn"><a href="@Url.Action("ondukuzuncu_akademik_bilisim_kongresi_oncesinde_egitim_verdik","News", new { area =""})" class="theme-btn btn-style-one">Daha Fazla Oku</a></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>*@
+                <!-- project block -->
+                <!-- project block -->
+
+                @foreach (var item in Model)
+                {
+                    <div class="project-block-two mix Business Energy al col-lg-4 col-md-6">
+                        <div class="inner-box">
+                            <div class="image">
+                                <img src="~/@item.Foto" style="width:350px; height:250px;" alt="">
+                            </div>
+                            <div class="lower-box">
+                                <div class="caption">
+                                    <h4><a href="project-details.html">@item.Baslik</a></h4>
+                                    <div class="text" style="text-align:justify;">@string.Format("{0: dd MMMM yyyy}", item.Tarih)</div>
+                                    <div class="link-btn"><a href="/mevasis/haber-detay/@item.seourl" class="theme-btn btn-style-one">Daha Fazla Oku</a></div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                }
+
+
+
+
+
+
+
+            </div>
+
+        </div>
+    </div>
+</section>
+
+

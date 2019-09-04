@@ -1,0 +1,54 @@
+﻿@model IEnumerable<MevaPro.Models.Kategori>
+
+@{
+    ViewBag.Title = "BizdenHaberler";
+    Layout = "~/Views/Shared/Layout.cshtml"; 
+}
+@using MevaPro.Models;
+
+
+
+
+<!-- Our Projects -->
+<section class="project-section sp-two">
+    <div class="container">
+        <div class="mixitup-gallery">
+            <!--Filter-->
+            <div class="filters clearfix">
+                <ul class="filter-tabs filter-btns">
+
+                    @foreach (var item in Model)
+                    {
+                        <li class="filter active" data-role="button" data-filter="">
+                            <a href="javascript:GetKategoriler('@item.KategoriId');"><span>@item.KategoriAdi</span></a>
+                        </li>
+                    }
+                </ul>
+            </div>
+            <div class="filter-list row clearfix" id="habericerikler">
+                             
+
+            </div>
+
+        </div>
+    </div>
+</section>
+
+@section scripts{
+    <script type="text/javascript">
+        $(function () {
+            GetKategoriler();
+        })
+        function GetKategoriler(id) {
+            $.get('/Home/_HaberIcerikler', { 'id': id }, function (result) {
+                debugger
+                $('#habericerikler').html(result);
+            })
+        }
+
+    </script>
+    
+    
+    
+    }
+

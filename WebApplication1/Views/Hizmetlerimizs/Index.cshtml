@@ -1,0 +1,50 @@
+﻿@model List<MevaPro.Models.Hizmetlerimiz>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/AdminLayout.cshtml";
+}
+
+<div class="container" pb-5>
+    <h2 style="text-align:center;">Hizmetler</h2>
+
+    <p>
+        @Html.ActionLink("Hizmet Ekle", "Create", null, new { @class = "btn btn-primary" })
+    </p>
+    <table class="table table-striped table-bordered">
+        <thead>
+            <tr>
+                <th>
+                    Başlık
+                </th>
+                <th>
+                    İçerik
+                </th>
+                <th>
+                    Fotoğraf
+                </th>
+                <th> </th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Baslik)
+                    </td>
+                    <td>
+                        @Html.Raw(item.Icerik)
+                    </td>
+                    <td>
+                        <img width="75" height="80" src="@item.Foto" />
+                    </td>
+                    <td>
+                        @Html.ActionLink("Düzenle", "Edit", new { id = item.HizmetId }, new { @class = "btn btn-success" })
+                        @Html.ActionLink("Sil", "Delete", new { id = item.HizmetId }, new { @class = "btn btn-danger" })
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+    </div>

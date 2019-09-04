@@ -1,0 +1,25 @@
+﻿@model List<Haberler>
+
+@using MevaPro.Models;
+
+@foreach (var item in Model)
+{
+    <div class="project-block-two Business Energy al col-lg-4 col-md-6">
+        <div class="inner-box">
+            <div class="image">
+                <img src="~/@item.Foto" style="width:350px; height:250px;" alt="">
+            </div>
+            <div class="lower-box">
+                <div class="caption">
+
+                    <h4><a href="project-details.html">@item.Baslik</a></h4>
+
+
+                    <div class="text" style="text-align:justify;">@string.Format("{0: dd MMMM yyyy}", item.Tarih)</div>
+                    <div class="link-btn"><a href="~/mevasis/haber-detay/@item.seourl" class="theme-btn btn-style-one">Daha Fazla Oku</a></div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+}

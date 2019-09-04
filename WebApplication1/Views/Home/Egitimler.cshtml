@@ -1,0 +1,112 @@
+﻿
+@{
+    ViewBag.Title = "Egitimler";
+    Layout = "~/Views/Shared/Layout.cshtml";
+}
+
+<section class="project-details sp-four">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8">
+                <h1>Eğitimler</h1>
+                <div class="image mb-30" style="max-width:55%;"><img src="~/Content/images/resource/education.jpeg" alt=""></div>
+                <div class="text mb-30" style="text-align:justify;">
+                    Mevasis olarak Teknik Danışmanlık, Yazılım Danışmanlığı ve Bakım & Destek hizmetlerimizin dışında uzman eğitim kadromuz ile şirketiniz için özel eğitim müfredatları hazırlıyoruz. Bu eğitimlerde müfredat istekleriniz doğrultusunda şekillendiği için ihtiyacınız olan eğitime doğru şekilde ve kısa zamanda ulaşmış oluyorsunuz.
+                </div>
+            </div>
+            <div class="col-lg-4 sidebar">
+                <div class="broucher">
+                    <a href="#" class="theme-btn"><span class="flaticon-acrobat"></span>Şirket Sunumu <br>Aktif Form</a>
+                </div>
+
+                <div class="request-callback" style="text-align:justify">
+                    <div class="inner-box">
+                        <h4>Nasıl yardımcı olabiliriz?</h4>
+                        <div class="text" style="text-align:justify;">Bizimle iletişime geçmek için lütfen online kayıt formundan yada telefon ile doğrudan iletişime geçebilirsiniz.</div>
+                        <div class="phone-number"><span class="flaticon-headphones"></span>(0212) 483 70 33</div>
+                        <div class="link-btn"><a href="@Url.Action("iletisim","Home", new { area =""})" class="theem-btn btn-style-one">Bize ulaşın</a></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="blockquote">
+            @*Bu kısımı sor*@
+            <p>
+                Consulting WP – we help companies assess their skills and choose a new direction which utilizes the talents of the team and resources most productively.
+            </p>
+        </div>
+        <div>
+            <h1>Eğitim Oranları</h1>
+            <div class="image mb-30"><img src="~/Content/images/resource/Egitim.png" alt=""></div>
+            <div>
+                <h1>Eğitimi neden Mevasis'den almalıyım?</h1>
+                <p>
+                    Şirketinizi kurum içi eğitimlerini neden diğer eğitim veren firmalardan değil de Mevasis’den almalısınız?
+                </p>
+                <ul class="list-style-six mb-30">
+                    <li>Eğitmenlerimiz alanlarında deneyimlidirler</li>
+                    <li>Eğitmenlerimiz anlatılan ürün, servis ya da sistem konusunda kapsamlı bilgi sahibidir</li>
+                    <li>Eğitimler için Mevasis tarafından özel hazırlanmış belgeler ile eğitim desteklenir.</li>
+                    <li>İstekleriniz doğrultusunda hazırlanan esnek müfredat</li>
+                    <li>Dersin akıcılığı</li>
+                    <li> Ders anında ya da sonrasında demo imkanı</li>
+                </ul>
+            </div>
+
+        </div>
+        <h1>Eğitimlerimiz</h1>
+        <ul class="accordion-box">
+            <!--Accordion Block-->
+            <li class="accordion block">
+                <div class="acc-btn active"><div class="icon-outer"><span class="icon icon_plus fa fa-angle-down"></span> <span class="icon icon_minus fa fa-angle-down"></span></div>Linux Sistem Yönetimi</div>
+                <div class="acc-content current">
+                    <div class="content">
+                        <div class="text" style="text-align:justify;">
+                            Başlangıç, Orta, Üst ve Monitoring olmak üzere dört temel seviyede Linux Sistem Yönetimi eğitimi hizmetti vermekteyiz. Bu eğitimler üç gün sürmektedir. Kurum içinde istekler doğrultusunda eğitim müfredatı esnetilerek eksik taraflarınız giderilmiş oluyor.
+                        </div>
+                    </div>
+                </div>
+            </li>
+
+            <!--Accordion Block-->
+            <li class="accordion block">
+                <div class="acc-btn"><div class="icon-outer"><span class="icon icon_plus fa fa-angle-down"></span> <span class="icon icon_minus fa fa-angle-down"></span></div>Linux Son Kullanıcı</div>
+                <div class="acc-content">
+                    <div class="content">
+                        <div class="text" style="text-align:justify;">
+                            Lisans maliyetlerinin düşürülmesi adına Kurumsal Göç hizmeti almayı düşünebilirsiniz. Bunu yapmadan önce kullanıcı bilgisayarlarınız için temel seviyede bir Linux eğitimi verilmesi gerekmektedir. İki gün süren bu eğitimde son kullanıcıların Linux ile olan ön yargıları kırılarak daha istekli ve performanslı olarak Linux kullanmaları sağlanacaktır.
+                        </div>
+                    </div>
+                </div>
+            </li>
+
+            <!--Accordion Block-->
+            <li class="accordion block">
+                <div class="acc-btn"><div class="icon-outer"><span class="icon icon_plus fa fa-angle-down"></span> <span class="icon icon_minus fa fa-angle-down"></span></div>Yazılım Eğitimleri</div>
+                <div class="acc-content">
+                    <div class="content">
+                        <div class="wpb_wrapper">
+                            <div class="text" style="text-align:justify;">
+                                Bu eğitimin verileceği çalışanların temel olarak yazılım hayat döngüsü ve algoritma konusunda temel bilgi sahibi olması beklenmektedir. Bu bilgiye sahip olan çalışanlarınız için Php, C, C++, Python, Git eğitimleri vermekteyiz.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </li>
+
+            <!--Accordion Block-->
+            <li class="accordion block">
+                <div class="acc-btn"><div class="icon-outer"><span class="icon icon_plus fa fa-angle-down"></span> <span class="icon icon_minus fa fa-angle-down"></span></div>Güvenlik Eğitimleri</div>
+                <div class="acc-content">
+                    <div class="content">
+                        <div class="text" style="text-align:justify;">
+                            Bu eğitim siber güvenlik alanında uzmanlaşmak isteyen veya bu alandaki çalışanlarınız için tercih edilebilir. Katılımcılar siber dünyanın görünen sınırlarını tanıyarak gerçekleştirilebilecek saldırı tiplerini ve korunma yöntemlerini teorik ve pratik yönleriyle öğrenecekler.
+                        </div>
+                    </div>
+                </div>
+            </li>
+        </ul>
+        <!-- end -->
+    </div>
+</section>
+

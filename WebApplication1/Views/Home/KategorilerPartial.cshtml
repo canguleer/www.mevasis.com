@@ -1,0 +1,22 @@
+﻿@using MevaPro.Models;
+@{
+    ViewBag.Title = "KategorilerPartial";
+    Layout = null;
+    List<Kategori> kategoriler = null;
+
+    mevasisEntities db = new mevasisEntities();
+    kategoriler = db.Kategoris.ToList();
+}
+
+
+
+<ul class="filter-tabs filter-btns">
+
+    @foreach (var item in kategoriler)
+    {
+        <li class="filter active" data-role="button" data-filter="">
+            <a href="/mevasis/kategori-listeleme/@item.KategoriId"><span>@item.KategoriAdi</span></a>
+        </li>
+    }
+
+</ul>

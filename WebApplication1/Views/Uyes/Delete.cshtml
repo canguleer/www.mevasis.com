@@ -1,0 +1,60 @@
+﻿@model MevaPro.Models.Uye
+
+@{
+    ViewBag.Title = "Delete";
+    Layout = "~/Views/Shared/AdminLayout.cshtml";
+}
+
+<div class="container pb-5">
+
+    <div>
+        <h4 style="text-align:center">Üye Sil</h4>
+        <hr />
+        <dl class="dl-horizontal">
+            <dt>
+                @Html.DisplayNameFor(model => model.AdSoyad)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.AdSoyad)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.Email)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Email)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.Sifre)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Sifre)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.Yetki.Yetki1)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Yetki.Yetki1)
+            </dd>
+        </dl>
+
+        @using (Html.BeginForm())
+        {
+            @Html.AntiForgeryToken()
+
+            <div class="form-actions no-color">
+                <input type="submit" value="Sil" class="btn btn-danger" />
+
+            </div>
+        }
+        <div style="margin-top:20px;">
+            @Html.ActionLink("Geri Dön", "Index", null, new { @class = "btn btn-warning" })
+        </div>
+    </div>
+    </div>

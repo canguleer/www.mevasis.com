@@ -1,0 +1,47 @@
+﻿@model List<MevaPro.Models.Hizmetlerimiz>
+@{
+    ViewBag.Title = "Cözümler";
+    Layout = "~/Views/Shared/Layout.cshtml";
+}
+
+<section class="project-section sp-two">
+    <div class="container">
+
+       
+            <div class="mixitup-gallery">
+                <div class="filter-list row clearfix">
+                    @foreach (var item in Model)
+                    {
+                        <div class="project-block-one mix Business Energy al col-lg-4 col-md-6">
+
+                            <div class="inner-box">
+                                <div class="image">
+                                    <img src="~/@item.Foto"  style="width:357px; height:254px"  alt="">
+                                    <div class="caption">
+                                        <div>
+                                            <h4>@item.Baslik</h4>
+                                        </div>
+                                    </div>
+
+                                    <div class="overlay-box">
+                                        <div class="overlay-inner">
+                                            <div class="content">
+                                                <div class="text" style="text-align:justify;">Daha fazla bilgi almak istiyorsanız detaylar için tıklayınız</div>
+                                                <a href="~/mevasis/hizmet-detay/@item.seourl" class="read-more">Daha Fazla Oku</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    }
+                </div>
+            </div>
+      
+
+
+
+    </div>
+</section>
+

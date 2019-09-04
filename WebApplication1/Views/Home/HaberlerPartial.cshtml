@@ -1,0 +1,43 @@
+﻿@model IEnumerable<MevaPro.Models.Haberler>
+
+@{
+    ViewBag.Title = "HaberlerPartial";
+    Layout = null;
+}
+
+<div class="row">
+
+
+    @foreach (var item in Model)
+    {
+        int uzunluk = item.Icerik.Length;
+       
+        <div class="col-lg-6 news-block-one">
+
+            <div class="inner-box">
+                <div class="lower-content">
+                    @*<h4><a></a></h4>*@
+                    <ul class="post-meta">
+                        <li><strong>@item.Uye.AdSoyad</strong></li>
+                        <li><span>@string.Format("{0: dd MMMM yyyy}", item.Tarih)</span></li>
+                    </ul>
+                    <div class="text">@item.Baslik
+                       
+
+                    </div>
+                    <div class="link-btn"><a href="/mevasis/haber-detay/@item.seourl" class="read-more-btn">Detay <span class="fa fa-long-arrow-right"></span></a></div>
+                </div>
+            </div>
+        </div>
+
+       
+    }
+
+
+
+
+
+
+
+</div>
+

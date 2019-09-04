@@ -1,0 +1,29 @@
+﻿@using MevaPro.Models;
+@{
+    ViewBag.Title = "HizmetBaslikPartial";
+    Layout = null;
+}
+
+
+@{
+    mevasisEntities db = new mevasisEntities();
+    var hizmetlerimizs = db.Hizmetlerimizs.Select(m => new {m.HizmetId, m.Baslik,m.seourl }).ToList();
+    db.Dispose();
+
+}
+
+
+
+
+<ul>
+
+    @foreach (var item in hizmetlerimizs)
+    {
+        <li><a href="/mevasis/hizmet-detay/@item.seourl">@item.Baslik</a></li>
+    }
+
+</ul>
+
+
+
+

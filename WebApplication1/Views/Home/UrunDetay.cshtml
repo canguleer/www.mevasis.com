@@ -1,0 +1,90 @@
+﻿@model MevaPro.Models.Urunler
+
+@{
+    ViewBag.Title = "UrunDetay";
+    Layout = "~/Views/Shared/Layout.cshtml";
+}
+
+<section class="case-details">
+
+
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8">
+                @*<div class="image mb-30"><img src="~/@Model.Foto" style="width:370px; height:250px;" alt=""></div>*@
+                <div class="content">
+                    <h1 style="margin-top:20px;">@Model.Baslik</h1>
+                    @*<div class="text">*@
+                    <p>@Html.Raw(Model.Icerik)</p>
+                    @*</div>*@
+                </div>
+            </div>
+
+            <div class="col-lg-4">
+
+                <ul class="accordion-box active" style="margin-top:60px;">
+
+                    @{
+
+                        Html.RenderAction("ÜrünlerSideBarPartial", "Home");
+                    }
+
+                </ul>
+
+                <div class="wrapper">
+                    <!-- Sidebar -->
+                    <nav id="sidebar">
+                        <div class="sidebar-header">
+                            <h3 style="margin-top:10px;">Hizmetler</h3>
+                        </div>
+
+                        <ul class="list-unstyled components">
+                            <li>
+                                @{
+
+                                    Html.RenderAction("HizmetBaslikPartial", "Home");
+
+                                }
+                            </li>
+                        </ul>
+                    </nav>
+
+                </div>
+
+
+
+
+
+
+                <div class="broucher" style="margin-top:30px;">
+                    <a href="#" class="theme-btn"><span class="flaticon-acrobat"></span>Şirket Sunumu <br>Aktif Form</a>
+                </div>
+
+                <div class="request-callback" style="text-align:justify">
+                    <div class="inner-box">
+                        <h4>Nasıl yardımcı olabiliriz?</h4>
+                        <div class="text" style="text-align:justify;">Bizimle iletişime geçmek için lütfen online kayıt formundan yada telefon ile doğrudan iletişime geçebilirsiniz.</div>
+                        <div class="phone-number"><span class="flaticon-headphones"></span>(0212) 483 70 33</div>
+                        <div class="link-btn"><a href="@Url.Action("iletisim","Home", new { area =""})" class="theem-btn btn-style-one">Bize ulaşın</a></div>
+                    </div>
+                </div>
+
+                <div class="sidebar-header">
+                    <h3 style="margin-top:10px;">Haberler Kategori</h3>
+                </div>
+
+                @{
+                    Html.RenderAction("KategorilerPartial", "Home");
+
+                }
+
+
+
+            </div>
+
+        </div>
+    </div>
+
+</section>
+
+

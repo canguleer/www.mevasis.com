@@ -1,0 +1,176 @@
+﻿
+@{
+    ViewBag.Title = "BeeGFS";
+    Layout = "~/Views/Shared/Layout.cshtml";
+}
+
+<!-- Service details -->
+<section class="project-details sp-four">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8">
+                <h1>BeeGFS nedir?</h1>
+                <div class="image mb-30"><img src="~/Content/images/resource/BeeGFSAR.jpeg" alt=""></div> @*Sonra gelecek resim*@
+            </div>
+            <div class="col-lg-4 sidebar">
+                <div class="broucher">
+                    <a href="#" class="theme-btn"><span class="flaticon-acrobat"></span>Şirket Sunumu <br>Aktif Form</a>
+                </div>
+
+                <div class="request-callback" style="text-align:justify">
+                    <div class="inner-box">
+                        <h4>Nasıl yardımcı olabiliriz?</h4>
+                        <div class="text" style="text-align:justify;">Bizimle iletişime geçmek için lütfen online kayıt formundan yada telefon ile doğrudan iletişime geçebilirsiniz.</div>
+                        <div class="phone-number"><span class="flaticon-headphones"></span>(0212) 483 70 33</div>
+                        <div class="link-btn"><a href="@Url.Action("iletisim","Home", new { area =""})" class="theem-btn btn-style-one">Bize ulaşın</a></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="content">
+            <div class="row">
+                <div class="col-lg-8">
+                    <div class="text mb-30">
+                        <p>BeeGFS, performans açısından kritik ortamlarda I / O yoğun iş yüklerini yönetmek için özel olarak tasarlanmış lider bir paralel küme dosya sistemidir. Dünyanın önde gelen kuruluşlarından, üniversitelerden ve araştırmacılardan, kurulum kolaylığı, maksimum ölçeklenebilirlik, sağlamlık ve istisnai esneklikten - depolama sunucularının da bilgi işlem işleri için de kullanıldığı, yakınlaştırılmış kurulumlar dahil olmak üzere - dünya çapında beğeni toplayan BeeGFS, sonuçları daha hızlı sunarak ve yeni veri analizi yöntemlerini mümkün kılarak verimliliği artırıyor.</p>
+                        <p>BeeGFS, POSIX dosya sistemi arayüzüne dayalı, yazılım tanımlı bir depolamadır; bu, uygulamaların BeeGFS'den yararlanmak için yeniden yazılmasını veya değiştirilmesini gerektirmez. BeeGFS kullanıcıları, dosya sistemindeki verilere erişir, ağ üzerinden depolama sunucularıyla iletişim kurar, herhangi bir TCP / IP tabanlı bağlantı üzerinden veya InfiniBand (IB), Omni-Path (OPA) ve RDMA üzerinden Converged Ethernet (RDT) gibi RDMA özellikli ağlar üzerinden iletişim kurar.</p>
+                        <p>BeeGFS'yi çalıştırmak için belirli bir kurumsal Linux dağıtımı veya başka bir özel ortam gerekmez. BeeGFS istemcisi ve sunucuları, küçük kümeler veya ağlar için performans artışlarını sağlamak amacıyla aynı makinede bile çalışabilir.</p>
+                        <p>BeeGFS, sunucularda özel dosya sistemi bölümleri gerektirmez - Standart Linux dosya sistemlerinden herhangi biri ile formatlanmış mevcut bölümleri kullanır, örn. XFS veya ext4. Daha büyük ağlar için, farklı konfigürasyonlara sahip birkaç farklı BeeGFS dosya sistemi bölümü oluşturmak da mümkündür.</p>
+                    </div>
+                    <ul class="accordion-box">
+                        <!--Accordion Block-->
+                        <li class="accordion block">
+                            <div class="acc-btn"><div class="icon-outer"><span class="icon icon_plus fa fa-angle-down"></span> <span class="icon icon_minus fa fa-angle-down"></span></div>BeeGFS vs Geleneksel Dosya Sistemleri</div>
+                            <div class="acc-content">
+                                <div class="content">
+                                    <div class="text" style="text-align:justify;">
+                                        <p>BeeGFS geleneksel dosya sistemlerinin sınırlamalarını ve kısıtlamalarını aşmak için oluşturuldu.</p>
+                                    </div>
+                                    <div class="col-md-7"><div class="image"><img src="~/Content/images/resource/BeeGFS.jpeg" alt=""></div></div>
+                                    <div class=" text">
+                                        <p>Bu mimaride, dosya sistemini istemci tarafına monte etmek, özel sunucu bileşenlerinde meta verileri yönetmek, çeşitli donanım düğümleri üzerinde bunları üst üste koymak ve özel sunucu bileşenlerinde nesneleri düzenlemek için adanmış Linux çekirdek modülleri gereklidir. Ancak, bu yaklaşımın üç sorunu vardır:</p>
+                                        <ul class="list-style-six">
+                                            <li>Öğrenmek ve yönetmek zordur.</li>
+                                            <li>Küçük ve büyük dosyalar / IO profilleri için tasarlanmamıştır (kritik proje ve verilerdeki performansı engeller).</li>
+                                            <li>Birçok durumda çok masraflıdır</li>
+                                        </ul>
+                                        <p>Avrupa'da uygulamalı araştırma için önde gelen kuruluş olan Fraunhofer-Gesellschaft ve onun bir alt kuruluşu olan Fraunhofer Yüksek Performanslı Bilgi İşlem Merkezi (Fraunhofer), daha iyi bir yol olması gerektiğine karar verdi. Bu nedenle BeeGFS'yi geliştirdiler.</p>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </li>
+
+                        <!--Accordion Block-->
+                        <li class="accordion block">
+                            <div class="acc-btn"><div class="icon-outer"><span class="icon icon_plus fa fa-angle-down"></span> <span class="icon icon_minus fa fa-angle-down"></span></div>BeeGFS:Performans ve Ölçeklenebilirlik için Yeni Bir Standart</div>
+                            <div class="acc-content">
+                                <div class="content">
+                                    <div class="text" style="text-align:justify;">
+                                        <p>BeeGFS çeşitli seviyelerde maksimum performans ve ölçeklenebilirlik sunar. Dağıtılmış dosya içeriğini, bir dosyadaki depolama sunucuları arasında veya dizin tabanının yanı sıra dağıtılmış meta veriler arasında esnek geçişi destekler.</p>
+                                        <p>BeeGFS kullanımı kolaydır ve çekirdek yamaları gerektirmez. İstemci, yamasız bir çekirdek modülüdür, sunucu bileşenleri ise kullanıcı alanı canavarlarıdır. Grafiksel küme yükleme araçlarıyla birlikte gelir ve istediğiniz zaman çalışan sisteme daha fazla istemci ve sunucu eklemenizi sağlar.</p>
+                                        <p>Yerel BeeGFS istemcisi ve sunucu bileşenleri Linux için x86, x86_64 ve OpenPOWER, ARM64 ve diğer mimariler için kullanılabilir. BeeGFS, kullanıcı verilerini birden çok sunucuya şeffaf bir şekilde yaymaktadır. Sistemdeki sunucu ve disk sayısını artırarak, dosya sisteminin performansını ve kapasitesini, küçük kümelerden binlerce düğümlü kurumsal sınıf sistemlere sorunsuz bir şekilde ihtiyaç duyduğunuz düzeye ölçekleyebilirsiniz.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+
+                        <!--Accordion Block-->
+                        <li class="accordion block">
+                            <div class="acc-btn"><div class="icon-outer"><span class="icon icon_plus fa fa-angle-down"></span> <span class="icon icon_minus fa fa-angle-down"></span></div>Oyun Değiştiren Kullanıcı Alan Kavramı</div>
+                            <div class="acc-content">
+                                <div class="content">
+                                    <div class=" text">
+                                        <p>BeeGFS kullanıcı alanı kavramı her açıdan en son teknoloji ürünüdür. Müşterilerin herhangi bir I/O profil gereksinimini yönetmeleri için yetkilendirilmesi, hem çok küçük hem de büyük dosyalar için aynı anda esnek bir şekilde kullanılabilir. Bunun nedeni, meta veri hizmeti sunucusunun dosyalar için geçiş bilgisini yönetirken, dosya açma / kapama işleminin veri erişiminde yer almamasıdır. Bu, temel dosya sistem (ler) inin tüm kaynaklarının ağda ve bağlı donanım bileşenlerinde tam bant genişliği sağladığını gösterir. Elde edilen çok yönlülük, BeeGFS'nin yakınsak, hiper-yakınsak (minimum 1 depolama düğümü) ve klasik HPC altyapılarında kullanılmasını sağlar.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class=" text">
+                            <h3>BeeGFS Öncül Kurumsal Özellikler</h3>
+                            <ul class="list-style-six">
+                                <li>Yüksek Erişilebilirlik</li>
+                                <li>Kota Uygulaması</li>
+                                <li>Erişim Kontrol Listeleri (ACL)</li>
+                                <li>Depolama Havuzları</li>
+                                <li>BeeOND ile burst buffer fonksiyonu</li>
+                            </ul>
+                        </li>
+                        <!--Accordion Block-->
+                        <li class="accordion block">
+                            <div class="acc-btn"><div class="icon-outer"><span class="icon icon_plus fa fa-angle-down"></span> <span class="icon icon_minus fa fa-angle-down"></span></div>Yüksek Erişilebilirlik </div>
+                            <div class="acc-content">
+                                <div class="content">
+                                    <div class=" text">
+                                        <p>Yüksek erişilebilirlikli depolama ve meta veri aynalama "arkadaş grupları" olarak adlandırılır. Genel olarak, bir arkadaş grubu, birbirleri arasındaki veri çoğaltmasını dahili olarak yöneten bir hedef çiftidir. Arkadaş grup yaklaşımı, bir sistemdeki tüm sunucuların yarısının başarısız olması durumunda bile tüm verilere erişim imkanı verir.</p>
+                                        <div class="col-md-7"><div class="image"><img src="~/Content/images/resource/BeeGFS1.jpeg" alt=""></div></div>
+                                        <p>Yerleşik BeeGFS Arkadaş Aynalama özelliği verileri otomatik olarak çoğaltır, depolama sunucusu arızalarını, uygulamaları çalıştırmak için şeffaf bir şekilde ele alır ve bir sunucu çevrimiçi olduğunda otomatik olarak kendini iyileştirir ve yalnızca makine çevrimdışıyken değiştirilen dosyaları etkin bir şekilde yeniden gönderir. </p>
+                                        <p>Depolama sunucusu Arkadaş Aynalama özelliği, tek sayıda depolama sunucusuyla da kullanılabilir. Bu, BeeGFS arkadaş grupları sunuculara atanmasından bağımsız olarak, aşağıdaki örnek grafikte gösterildiği gibi, sunucu başına 3 sunucu ve 2 depolama hedefi içeren ferdi depolama hedeflerin oluştuğunda da çalışır.</p>
+                                        <div class="col-md-7"><div class="image"><img src="~/Content/images/resource/BeeGFS3.jpeg" alt=""></div></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <!--Accordion Block-->
+                        <li class="accordion block">
+                            <div class="acc-btn"><div class="icon-outer"><span class="icon icon_plus fa fa-angle-down"></span> <span class="icon icon_minus fa fa-angle-down"></span></div>Kota Uygulaması</div>
+                            <div class="acc-content">
+                                <div class="content">
+                                    <div class="text" style="text-align:justify;">
+                                        <p>BeeGFS, disk alanı tahsisi ve yığın dosya sayısı için sistem genelinde kotaların kullanıcı başına veya grup bazında tanımlanmasını sağlar. Bu, farklı erişim katmanlarındaki kullanıcıları farklı kısıtlama düzeyleriyle düzenlemek ve aynı zamanda bireylerin tüm dosya sisteminin kaynaklarını tek başına tüketmesini önlemek için kullanılabilir.</p>
+                                        <p>BeeGFS kotası yönetim mekanizması iki özellikten oluşur:</p>
+                                        <ul class=" list-style-six">
+                                            <li>Kota Takibi</li>
+                                            <li>Kota Uygulaması</li>
+                                        </ul>
+                                        <p>Kota takibi, veri miktarının sorgulanmasını ve kullanıcıların ve grupların sistemde herhangi bir kısıtlama koymadan kullandığı yığın dosyalarının sayısını sağlar.</p>
+                                        <p>Kota uygulaması, tüm sistemdeki kota sınırlarının tanımını ve uygulamasını sağlar. Bu özellik etkinleştirildiğinde, BeeGFS yönetim programı düzenli aralıklarla tüm depolama hedeflerinden kota raporlarını toplar, aşılan kota sınırlarını kontrol eder ve sistemin artık daha fazla kaynak tüketmesine izin vermez.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <!--Accordion Block-->
+                        <li class="accordion block">
+                            <div class="acc-btn"><div class="icon-outer"><span class="icon icon_plus fa fa-angle-down"></span> <span class="icon icon_minus fa fa-angle-down"></span></div>Erişim Kontrol Listeleri (ACL)</div>
+                            <div class="acc-content">
+                                <div class="content">
+                                    <div class="text" style="text-align:justify;">
+                                        <p>BeeGFS'de Erişim Kontrol Listeleri, meta veri dosyalarının genişletilmiş dosya öznitelikleri olarak saklanır. ACL özelliğinin amacı kullanıcıları belirli IP adreslerinden belirli bir hedef IP adresine ve bağlantı noktasına gelen trafiğe izin vermek veya bunları reddetmektir. Genişletilmiş ACL'ler, kaynak paket adreslerini, hedef adresini, protokolleri ve bağlantı noktası numaralarını kontrol eder. Genel olarak, BeeGFS’nin Genişletilmiş ACL’leri daha iyi bir kontrol imkanı sunar ve bu da yüksek güvenlik sağlar. </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <!--Accordion Block-->
+                        <li class="accordion block">
+                            <div class="acc-btn"><div class="icon-outer"><span class="icon icon_plus fa fa-angle-down"></span> <span class="icon icon_minus fa fa-angle-down"></span></div>Depolama Havuzları </div>
+                            <div class="acc-content">
+                                <div class="content">
+                                    <div class="text" style="text-align:justify;">
+                                        <p>Kullanıcıların çalışmakta oldukları projelerde yüksek performans elde etmelerini sağlamak için, BeeGFS depolama havuzları özelliği, flash sürücülerini kullanıcılara sunar. Bu şekilde, kullanıcılar mevcut projeyi BeeGFS'den (beegfs-ctl komut satırı aracı aracılığıyla) flash sürücülere taşıyabilir ve böylece proje kullanıcı normal disk kullanımına karar verene kadar normal disk kullanmadan flash diskler üzerinde çalışır. </p>
+                                        <p>BeeGFS, sistem yöneticisinin grup hedeflerini gruplandırmasına ve arkadaş gruplarını farklı sınıflarda bir araya getirmesine izin vermek için depolama havuzları özelliğini tasarladı. Örneğin, hızlı ancak küçük solid-state sürücülerden oluşan bir havuz ve büyük ancak daha yavaş dönen diskler kullanan yığın depolama için başka bir havuz olabilir. Havuzlar, havuzdaki depolama hedeflerine bakmadan hangi havuzu kullanacaklarını hatırlamayı kolaylaştıran tanımlayıcı isimlere sahip olabilir.</p>
+                                        <div class="col-md-7"><div class="image"><img src="~/Content/images/resource/BeeGFS4.jpeg" alt=""></div></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <!--Accordion Block-->
+                        <li class="accordion block">
+                            <div class="acc-btn"><div class="icon-outer"><span class="icon icon_plus fa fa-angle-down"></span> <span class="icon icon_minus fa fa-angle-down"></span></div>BeeOND: Talep Üzerine BeeGFS (Burst Buffering)</div>
+                            <div class="acc-content">
+                                <div class="content">
+                                    <div class="text" style="text-align:justify;">
+                                        <p>Bir kümenin hesaplama düğümleri genellikle işletim sistemini depolamak ve uygulamalar için yerel bir geçici veri deposu sağlamak için dahili flash sürücüler ile donatılmıştır. Ancak, yerel bir geçici veri deposu kullanmak, genellikle, farklı işlem düğümlerinden gelen verilere paylaşılan erişim gerektirdiğinden, dağıtılmış uygulamalar için kullanışlı ya da uygun değildir, dolayısıyla SSD'lerin yüksek bant genişliği ve yüksek IOPS'si boşa harcanmış olur.</p>
+                                        <p>Dahili disklerdeki hesaplama işleri için ortak bir paralel dosya sisteminin oluşturarak bu problemi çözmek için (“beyond / ötesine geçme” ve “BeeGFS On Demand” ifadelerinin kısaltması olan) BeeOND özelliği geliştirilmiştir. BeeOND durumları, tam olarak iş için ayrılan düğümlerde tam olarak hesaplama işinin çalışma zamanı geçici olarak ortaya çıkar. Bu, işler için hızlı bir şekilde paylaşılan, tamamen flaşlı bir dosya sistemi sunar.</p>
+                                        <div class="col-md-7"><div class="image"><img src="~/Content/images/resource/BeeGFS5.jpeg" alt=""></div></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                    <!-- end -->
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+

@@ -1,0 +1,112 @@
+﻿@model IEnumerable<MevaPro.Models.Projeler>
+@{
+    ViewBag.Title = "Projeler";
+    Layout = "~/Views/Shared/Layout.cshtml";
+}
+
+<section class="project-section sp-two">
+    <div class="container">
+        <div class="mixitup-gallery">
+            <div class="filter-list row clearfix">
+                <!-- project block -->
+                @foreach (var item in Model)
+                {
+                    <div class="project-block-two mix Consumer al col-lg-4 col-md-6">
+                        <div class="inner-box">
+                            <div class="image">
+                                <img src="@item.Foto" style="width:357px; height:241px;" alt="">
+                            </div>
+                            <div class="lower-box">
+                                <div class="caption">
+                                    <h4><a href="project-details.html">@item.Baslik</a></h4>
+                                    <div class="text" style="text-align:justify;">Mevasis</div>
+                                    <div class="link-btn"><a href="/mevasis/proje-detay/@item.seourl" class="theme-btn btn-style-one">Daha Fazla Oku</a></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                }
+
+
+                <!-- project block -->
+                @*<div class="project-block-two mix Finance al col-lg-4 col-md-6">
+                    <div class="inner-box">
+                        <div class="image">
+                            <img src="~/Content/images/resource/project-13.jpg" alt="">
+                        </div>
+                        <div class="lower-box">
+                            <div class="caption">
+                                <h4><a href="project-details.html">Business Consulting</a></h4>
+                                <div class="text" style="text-align:justify;">Industry Name</div>
+                                <div class="link-btn"><a href="project-details.html" class="theme-btn btn-style-one">Read More</a></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- project block -->
+                <div class="project-block-two mix Business al col-lg-4 col-md-6">
+                    <div class="inner-box">
+                        <div class="image">
+                            <img src="~/Content/images/resource/project-14.jpg" alt="">
+                        </div>
+                        <div class="lower-box">
+                            <div class="caption">
+                                <h4><a href="project-details.html">Consumer Products</a></h4>
+                                <div class="text" style="text-align:justify;">Industry Name</div>
+                                <div class="link-btn"><a href="project-details.html" class="theme-btn btn-style-one">Read More</a></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- project block -->
+                <div class="project-block-two mix al col-lg-4 col-md-6">
+                    <div class="inner-box">
+                        <div class="image">
+                            <img src="~/Content/images/resource/project-15.jpg" alt="">
+                        </div>
+                        <div class="lower-box">
+                            <div class="caption">
+                                <h4><a href="project-details.html">Market Research</a></h4>
+                                <div class="text" style="text-align:justify;">Industry Name</div>
+                                <div class="link-btn"><a href="project-details.html" class="theme-btn btn-style-one">Read More</a></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- project block -->
+                <div class="project-block-two mix Consumer Finance al col-lg-4 col-md-6">
+                    <div class="inner-box">
+                        <div class="image">
+                            <img src="~/Content/images/resource/project-16.jpg" alt="">
+                        </div>
+                        <div class="lower-box">
+                            <div class="caption">
+                                <h4><a href="project-details.html">Intro Projects</a></h4>
+                                <div class="text" style="text-align:justify;">Industry Name</div>
+                                <div class="link-btn"><a href="project-details.html" class="theme-btn btn-style-one">Read More</a></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- project block -->
+                <div class="project-block-two mix Business Energy al col-lg-4 col-md-6">
+                    <div class="inner-box">
+                        <div class="image">
+                            <img src="~/Content/images/resource/project-17.jpg" alt="">
+                        </div>
+                        <div class="lower-box">
+                            <div class="caption">
+                                <h4><a href="project-details.html">Capital Financial Training</a></h4>
+                                <div class="text" style="text-align:justify;">Industry Name</div>
+                                <div class="link-btn"><a href="project-details.html" class="theme-btn btn-style-one">Read More</a></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- end -->*@
+            </div>
+        </div>
+
+    </div>
+</section>
+

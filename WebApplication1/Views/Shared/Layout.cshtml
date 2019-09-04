@@ -1,0 +1,375 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>MEVASİS</title>
+
+    <!-- Stylesheets -->
+    <link href="~/Content/css/bootstrap.css" rel="stylesheet">
+    <link href="~/Content/css/style.css" rel="stylesheet">
+    <link href="~/Content/css/responsive.css" rel="stylesheet">
+
+    <!-- Fav Icons -->
+    <link rel="shortcut icon" href="~/Content/images/favicon.png" type="image/x-icon">
+    <link rel="icon" href="~/Content/images/favicon.png" type="image/x-icon">
+    <!-- Responsive -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <!--[if lt IE 9]><script src="~/Content/https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script><![endif]-->
+    <!--[if lt IE 9]><script src="~/Content/js/respond.js"></script><![endif]-->
+</head>
+
+<body>
+    <div class="page-wrapper">
+
+        <!-- Preloader -->
+        <div class="preloader"></div>
+
+        <!-- main header -->
+        <header class="main-header hmx-35">
+
+            <!-- header info -->
+            <div class="header-info">
+                <div class="container">
+                    <div class="clearfix">
+                        <div class="float-left">
+                            <div class="main-logo" style="margin-top:-10px;">
+                                <a class="navbar-brand pr-50" href="/"><img src="~/Content/images/mevasis_logo.png" class="logo" alt="" style="width:280px; height:75px"></a>
+                            </div>
+                        </div>
+                        <div class="float-right">
+                            <div class="header-contact-info">
+                                <ul>
+                                    <li>
+                                        <div class="iocn-holder" style="font-size:20px;">
+                                            <span class="flaticon-contact"></span>
+                                        </div>
+                                        <div class="text-holder">
+                                            <h6 style="font-size:12px;">E-Posta Adresi</h6>
+                                            <p style="font-size:12px;">info@mevasis.com</p>
+                                        </div>
+
+                                    </li>
+                                    <li>
+                                        <div class="iocn-holder">
+                                            <span class="flaticon-location-pin"></span>
+                                        </div>
+                                        <div class="text-holder">
+                                            <h6 style="font-size:12px;">Adresimiz</h6> @*Yerleşkemiz*@
+                                            <p style="font-size:12px;">
+                                                Y.T.Ü. Davutpaşa Kampüsü
+                                                A1 Blok 1B17
+                                            </p>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+
+                    </div>
+                </div>
+            </div>
+            <!--Header-Upper-->
+            <div class="header-upper style-two dark" style="margin-top:-20px;">
+                <div class="container clearfix">
+                    <div class="black-bg-3 upper-right clearfix">
+
+                        <div class="nav-outer clearfix">
+                            <!-- Main Menu -->
+                            <nav class="main-menu navbar-expand-lg">
+                                <div class="navbar-header">
+                                    <!-- Toggle Button -->
+                                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                                        <span class="icon-bar"></span>
+                                        <span class="icon-bar"></span>
+                                        <span class="icon-bar"></span>
+                                    </button>
+                                </div>
+
+                                <div class="navbar-collapse collapse clearfix">
+                                    <ul class="navigation clearfix">
+                                        <li><a href="/">Anasayfa</a></li>
+                                        <li class="dropdown">
+
+                                            <a href="#">Kurumsal</a>
+                                            <ul>
+                                                <li><a href="@Url.Action("About", "Home", new { area = "" })">Mevasis Hakkında</a></li>
+                                                <li><a href="@Url.Action("Partners", "Home", new { area = "" })">İş Ortaklarımız</a></li>
+                                                <li><a href="@Url.Action("Projeler", "Home", new { area = "" })">Projelerimiz</a></li>
+                                                <li><a href="@Url.Action("BizdenHaberler", "Home", new { area = "" })">Bizden Haberler</a></li>
+                                            </ul>
+                                        </li>
+                                        <li class="dropdown">
+                                            <a href="#" onclick="cozumlinkk()">Ürünler</a>
+                                            @{
+
+                                                Html.RenderAction("UrunlerBaslikPartial", "Home");
+
+                                            }
+
+                                            @*<ul>
+                                                    <li><a href="@Url.Action("Bright_Cluster", "Home", new { area = "" })">Bright Cluster MAnager</a></li>
+                                                    <li><a href="@Url.Action("Engineframe", "Home", new { area = "" })">Engineframe</a></li>
+                                                    <li><a href="@Url.Action("Slurm", "Home", new { area = "" })">Slurm</a></li>
+                                                    <li><a href="@Url.Action("BeeGFS", "Home", new { area = "" })">BeeGFS</a></li>
+                                                    <li><a href="@Url.Action("SlurmGUI", "Home", new { area = "" })">SlurmGUI</a></li>
+                                                </ul>*@
+                                        </li>
+
+
+                                        <li class="dropdown">
+                                            <a href="@Url.Action("Cozumler","Home")" onclick="cozumlink()">Çözümler</a>
+
+
+                                            @{
+
+                                                Html.RenderAction("HizmetBaslikPartial", "Home");
+
+                                            }
+
+                                            @*<ul>
+                                                    <li><a href="@Url.Action("Yüksek_basarimli_hesaplama","Home", new { area =""})">Yüksek Başarımlı Hesaplama</a></li>
+                                                    <li><a href="@Url.Action("Kurumsal_göc_hizmetleri","Home", new { area =""})">Kurumsal Göç Hizmetleri</a></li>
+                                                    <li><a href="@Url.Action("Teknik_danismanlik","Home", new { area =""})">Teknik Danışmanlık</a></li>
+                                                    <li><a href="@Url.Action("Yazilim_gelistirme","Home", new { area =""})">Yazılım Geliştirme</a></li>
+                                                    <li><a href="@Url.Action("Bakim_destek","Home", new { area =""})">Bakım & Destek</a></li>
+                                                    <li><a href="@Url.Action("Egitimler","Home", new { area =""})">Eğitimler</a></li>
+                                                    <li><a href="@Url.Action("ERP_cözümler","Home", new { area =""})">Erp Çözümler</a></li>
+                                                </ul>*@
+                                        </li>
+                                        <li><a href="@Url.Action("Iletisim", "Home", new { area = "" })">İletişim</a></li>
+                                        @*  <li><a href="@Url.Action("Projeler", "Home", new { area = "" })">Projeler</a></li>*@
+
+                                    </ul>
+                                </div>
+                            </nav>
+
+
+
+                            <!-- Main Menu End-->
+                            <div class="outer-box float-right">
+                                <div class="link-btn">
+                                    <a href="@Url.Action("iletisim", "Home", new { area = "" })" class="theme-btn btn-style-one">TEKLİF İSTE</a>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+            <!--End Header Upper-->
+            <!--Sticky Header-->
+            <div class="sticky-header">
+                <div class="container clearfix">
+                    <!--Logo-->
+                    <div class="logo float-left">
+                        <a href="/" class="img-responsive"><img src="~/Content/images/mevasis_logo.png" alt="" title="" style="width:325px; height:100px"></a>
+                    </div>
+
+                    <!--Right Col-->
+                    <div class="right-col float-right">
+                        <!-- Main Menu -->
+                        <nav class="main-menu navbar-expand-lg">
+                            <div class="navbar-collapse collapse clearfix">
+                                <ul class="navigation clearfix">
+                                    <li><a href="/">Anasayfa</a></li>
+                                    <li class="dropdown">
+                                        <a href="#">Kurumsal</a>
+                                        <ul>
+                                            <li><a href="@Url.Action("About", "Home", new { area = "" })">Mevasis Hakkında</a></li>
+                                            <li><a href="@Url.Action("Partners", "Home", new { area = "" })">İş Ortaklarımız</a></li>
+                                            <li><a href="@Url.Action("Projeler", "Home", new { area = "" })">Projelerimiz</a></li>
+                                            <li><a href="@Url.Action("BizdenHaberler", "Home", new { area = "" })">Bizden Haberler</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="dropdown">
+                                        <a href="#" onclick="cozumlinkk()">Ürünler</a>
+
+                                        @{
+
+                                            Html.RenderAction("UrunlerBaslikPartial", "Home");
+
+                                        }
+                                        @*<ul>
+                                                <li><a href="@Url.Action("Bright_Cluster", "Home", new { area = "" })">Bright Cluster MAnager</a></li>
+                                                <li><a href="@Url.Action("Engineframe", "Home", new { area = "" })">Engineframe</a></li>
+                                                <li><a href="@Url.Action("Slurm", "Home", new { area = "" })">Slurm</a></li>
+                                                <li><a href="@Url.Action("BeeGFS", "Home", new { area = "" })">BeeGFS</a></li>
+                                                <li><a href="@Url.Action("SlurmGUI", "Home", new { area = "" })">SlurmGUI</a></li>
+
+                                            </ul>*@
+                                    </li>
+                                    <li class="dropdown">
+                                        <a href="#" onclick="cozumlink()">Çözümler</a>
+
+
+                                        @{
+
+                                            Html.RenderAction("HizmetBaslikPartial", "Home");
+
+                                        }
+
+                                        @*<ul>
+                                                <li><a href="@Url.Action("Yüksek_basarimli_hesaplama","Home", new { area =""})">Yüksek Başarımlı Hesaplama</a></li>
+                                                <li><a href="@Url.Action("Kurumsal_göc_hizmetleri","Home", new { area =""})">Kurumsal Göç Hizmetleri</a></li>
+                                                <li><a href="@Url.Action("Teknik_danismanlik","Home", new { area =""})">Teknik Danışmanlık</a></li>
+                                                <li><a href="@Url.Action("Yazilim_gelistirme","Home", new { area =""})">Yazılım Geliştirme</a></li>
+                                                <li><a href="@Url.Action("Bakim_destek","Home", new { area =""})">Bakım & Destek</a></li>
+                                                <li><a href="@Url.Action("Egitimler","Home", new { area =""})">Eğitimler</a></li>
+                                                <li><a href="@Url.Action("ERP_cözümler","Home", new { area =""})">Erp Çözümler</a></li>
+                                            </ul>*@
+                                    </li>
+                                    <li><a href="@Url.Action("iletisim","Home", new { area =""})">İletişim</a></li>
+                                    @*<li><a href="@Url.Action("Projeler","Home", new { area =""})">Projeler</a></li>*@
+                                </ul>
+                            </div>
+                        </nav><!-- Main Menu End-->
+                    </div>
+
+                </div>
+            </div>
+            <!--End Sticky Header-->
+        </header>
+        @RenderBody()
+        <!-- Main Footer -->
+        <footer class="main-footer">
+            <div class="container">
+
+                <!--Widgets Section-->
+                <div class="widgets-section">
+                    <div class="row clearfix">
+                        <!--Big Column-->
+                        <div class="big-column col-lg-6">
+                            <div class="row clearfix">
+
+                                <!--Footer Column-->
+                                <div class="footer-column col-lg-7 col-md-7">
+                                    <div class="footer-widget about-widget">
+                                        <div class="footer-logo">
+                                            <figure>
+                                                <a href="/"><img src="~/Content/images/mevasis_logo.png"></a>
+                                            </figure>
+                                        </div>
+                                        <div class="widget-content">
+                                            <div class="text">"Mevasis Bilişim olarak Yüksek Başarımlı Hesaplama alanında ihtiyaç duyduğunuz her konuda size yardımcı olmaya,hizmet vermeye ve işlerinize değer katmaya hazırız."</div>
+                                            <ul class="social-icon-three">
+                                                <li><a href="~/Content/#"><i class="fa fa-facebook"></i></a></li>
+                                                <li><a href="~/Content/#"><i class="fa fa-twitter"></i></a></li>
+                                                <li><a href="~/Content/#"><i class="fa fa-vimeo"></i></a></li>
+                                                <li><a href="~/Content/#"><i class="fa fa-linkedin"></i></a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!--Footer Column-->
+                                <div class="footer-column col-lg-5 col-md-5">
+                                    <div class="footer-widget services-widget">
+                                        <h2 class="widget-title">Çözümler</h2>
+                                        <div class="widget-content">
+                                            <ul class="list">
+                                                @{
+
+                                                    Html.RenderAction("HizmetBaslikPartial", "Home");
+
+                                                }
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!--Big Column-->
+                        <div class="big-column col-lg-6">
+                            <div class="row clearfix">
+
+                                <!--Footer Column-->
+                                <div class="footer-column col-lg-5 col-md-5">
+                                    <div class="footer-widget services-widget">
+                                        <h2 class="widget-title">Ürünler</h2>
+                                        <div class="widget-content">
+                                            @{
+
+                                                Html.RenderAction("UrunlerBaslikPartial", "Home");
+
+                                            }
+
+                                            @*<ul class="list">
+                                                    <li><a href="@Url.Action("Bright_Cluster", "Home", new { area = "" })">Bright Cluster MAnager</a></li>
+                                                    <li><a href="@Url.Action("Engineframe", "Home", new { area = "" })">Engineframe</a></li>
+                                                    <li><a href="@Url.Action("Slurm", "Home", new { area = "" })">Slurm</a></li>
+                                                    <li><a href="@Url.Action("BeeGFS", "Home", new { area = "" })">BeeGFS</a></li>
+                                                    <li><a href="@Url.Action("SlurmGUI", "Home", new { area = "" })">SlurmGUI</a></li>
+                                                </ul>*@
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--Footer Column-->
+                                <div class="footer-column col-lg-7 col-md-7">
+                                    <div class="footer-widget newsletter-widget">
+                                        <h2 class="widget-title">Haberiniz Olsun</h2>
+                                        <div class="widget-content">
+                                            <div class="text">En güncel haberler için;</div>
+                                            <form action="#">
+                                                <input type="text" placeholder="Mail Adresinizi Giriniz">
+                                                <button type="submit" class="theme-btn btn-style-one">ABONE OL</button>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--Footer Bottom-->
+            <div class="footer-bottom">
+                <div class="container">
+                    <div class="copyright-text">
+                        <p><a href="~/Content/#">Mevasis</a>  &copy;  Bilişlim Danışmanlık LTD.ŞTİ</p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- End Main Footer -->
+
+    </div>
+    <!--End pagewrapper-->
+    <!-- Scroll Top Button -->
+    <button class="scroll-top scroll-to-target" data-target="html">
+        <span class="fa fa-angle-up"></span>
+    </button>
+    <!-- jequery plugins -->
+    <script src="~/Content/js/jquery.js"></script>
+    <script src="~/Content/js/popover.js"></script>
+    <script src="~/Content/js/bootstrap.min.js"></script>
+    <script src="~/Content/js/wow.js"></script>
+    <script src="~/Content/js/owl.js"></script>
+    <script src="~/Content/js/validate.js"></script>
+    <script src="~/Content/js/mixitup.js"></script>
+    <script src="~/Content/js/isotope.js"></script>
+    <script src="~/Content/js/appear.js"></script>
+    <script src="~/Content/js/jquery.fancybox.js"></script>
+
+    <!-- Custom script -->
+    <script src="~/Content/js/script.js"></script>
+    @RenderSection("scripts", required: false)
+
+</body>
+</html>
+
+<script>
+    function cozumlink() {
+       window.location.href = '@Url.Action("Cozumler","Home", new { area =""})';
+    }
+    function cozumlinkk() {
+        window.location.href = '@Url.Action("Urunler","Home",new { area=""})'
+    }
+</script>
+
+
+
+

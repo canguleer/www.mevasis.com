@@ -1,0 +1,25 @@
+﻿@using MevaPro.Models;
+@{
+    ViewBag.Title = "UrunlerBaslikPartial";
+    Layout = null;
+}
+
+
+@{
+    mevasisEntities db = new mevasisEntities();
+    var urunlerimizs = db.Urunlers.Select(m => new { m.UrunId, m.Baslik,m.seourl }).ToList();
+    db.Dispose();
+
+}
+
+
+
+
+<ul>
+
+    @foreach (var item in urunlerimizs)
+    {
+        <li><a href="/mevasis/urun-detay/@item.seourl">@item.Baslik</a></li>
+    }
+
+</ul>

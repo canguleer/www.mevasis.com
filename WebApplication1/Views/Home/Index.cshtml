@@ -1,0 +1,328 @@
+﻿@model IEnumerable<MevaPro.Models.Hizmetlerimiz>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/Layout.cshtml";
+   
+}
+
+@using MevaPro.Models;
+<section class="main-slider2">
+    <div class="container-fluid">
+        <ul class="main-slider-carousel owl-carousel owl-theme slide-nav">
+            <li class="slider-wrapper">
+                <div class="image"><img src="~/Content/images/main-slider/grendel-1.jpg" alt=""></div>
+                <div class="slider-caption">
+                    <div class="container">
+                        <h2>Yüksek Başarımlı</h2>
+                        <h1>Hesaplama</h1>
+                        <div class="text">Şirketinizin ihtiyaç duyduğu yüksek işlemci gücüne ister satın alarak isterseniz kiralayarak sahip olun.</div>
+                        <div class="link-btn"><a href="@Url.Action("iletisim", "Home", new { area = "" })" class="theme-btn btn-style-one">Teklif İste</a></div>
+                    </div>
+                </div>
+                <div class="slide-overlay"></div>
+            </li>
+            <li class="slider-wrapper">
+                <div class="image"><img src="~/Content/images/main-slider/image-7.jpg" alt=""></div>
+                <div class="slider-caption">
+                    <div class="container">
+                        <h2>Değişime</h2>
+                        <h1>Hazır mısınız ?</h1>
+                        <div class="text">Şirketinizi yüksek maliyetli işletim sistemleri yerine LİNUX'un özgürlükler dünyası ile tanıştıralım.</div>
+                        <div class="link-btn"><a href="@Url.Action("iletisim", "Home", new { area = "" })" class="theme-btn btn-style-one">Teklif İste</a></div>
+                    </div>
+                </div>
+                <div class="slide-overlay"></div>
+            </li>
+            <li class="slider-wrapper">
+                <div class="image"><img src="~/Content/images/main-slider/Slider_3d.jpeg" alt=""></div>
+                <div class="slider-caption">
+                    <div class="container">
+                        <h2>Uzman</h2>
+                        <h1>Danışmanlar</h1>
+                        <div class="text">Sizi tanımak, yeni ufuklar kazandırmak ve şirketinizi daha ileriye taşımak için sabırsızlanıyoruz!</div>
+                        <div class="link-btn"><a href="@Url.Action("iletisim", "Home", new { area = "" })" class="theme-btn btn-style-one">Teklif İste</a></div>
+                    </div>
+                </div>
+                <div class="slide-overlay"></div>
+            </li>
+            <li class="slider-wrapper">
+                <div class="image"><img src="~/Content/images/main-slider/slide_1-2.jpg" alt=""></div>
+                <div class="slider-caption">
+                    <div class="container">
+                        <h2>Sorunsuz ve Kapsamlı </h2>
+                        <h1> BT Altyapı Hizmetleri</h1>
+                        <div class="text">İşletmelerin kapsamlı BT çözümleri bulmasına  yardımcı oluyoruz.</div>
+                        <div class="link-btn"><a href="@Url.Action("iletisim", "Home", new { area = "" })" class="theme-btn btn-style-one">Teklif İste</a></div>
+                    </div>
+                </div>
+                <div class="slide-overlay"></div>
+            </li>
+        </ul>
+    </div>
+</section>
+<!-- What we do two -->
+<section class="what-we-do-two sp-six grey-bg">
+    @*<div class="container">
+            <div class="service-block-three-area"  >
+                <div class="row" >
+                    <!-- services block one -->
+                    <div class="col-lg-3 col-md-6 service-block-three">
+                        <div class="inner-box" >
+                            <div class="image">
+                                <img src="~/Content/images/resource/service-1.jpg" alt="">
+                                <div class="caption">
+                                    <div>
+                                        <div class="icon-box"><span class="flaticon-graphic"></span></div>
+                                        <h4>HEDEFLERİMİZ</h4>
+                                    </div>
+                                </div>
+                                <div class="overlay-box">
+                                    <div class="overlay-inner">
+                                        <div class="content">
+                                            <div class="text">
+                                                Yapmış olduğumuz işlerden mutlu müşteriler kazanıyoruz.
+
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- services block one -->
+                    <div class="col-lg-3 col-md-6 service-block-three">
+                        <div class="inner-box">
+                            <div class="image">
+                                <img src="~/Content/images/resource/service-2.jpg" alt="">
+                                <div class="caption">
+                                    <div>
+                                        <div class="icon-box"><span class="flaticon-laptop"></span></div>
+                                        <h4>NEDEN MEVASİS</h4>
+                                    </div>
+                                </div>
+                                <div class="overlay-box">
+                                    <div class="overlay-inner">
+                                        <div class="content">
+                                            <div class="text">
+                                                Mevasis, BT konusundaki projelerde müşterilerinin iş ortağı olmayı amaçlar.
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- services block one -->
+                    <div class="col-lg-3 col-md-6 service-block-three">
+                        <div class="inner-box">
+                            <div class="image">
+                                <img src="~/Content/images/resource/service-3.jpg" alt="">
+                                <div class="caption">
+                                    <div>
+                                        <div class="icon-box"><span class="flaticon-business-1"></span></div>
+                                        <h4>STRATEJİMİZ</h4>
+                                    </div>
+                                </div>
+                                <div class="overlay-box">
+                                    <div class="overlay-inner">
+                                        <div class="content">
+                                            <div class="text">
+                                                Kooperatif süreç odaklı, en karmaşık iş zorluklarına hızlı strateji çözümleri.
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <!-- services block one -->
+                    <div class="col-lg-3 col-md-6 service-block-three">
+                        <div class="inner-box">
+                            <div class="image">
+                                <img src="~/Content/images/resource/service-4.jpg" alt="">
+                                <div class="caption">
+                                    <div>
+                                        <div class="icon-box"><span class="flaticon-creative-idea"></span></div>
+                                        <h4>YENİLİKÇİ DÜŞÜNCE</h4>
+                                    </div>
+                                </div>
+                                <div class="overlay-box">
+                                    <div class="overlay-inner">
+                                        <div class="content">
+                                            <div class="text">Her geçen gün yenilenen dünyanın,hızına ayak uydurarak kendimizi geliştiriyoruz. </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- end column-->
+                </div>
+            </div>
+
+        </div>*@
+    <section class="project-section grey-bg sp-two px-4" style="margin-top:-80px;">
+        <div class="container">
+            <!-- Sec title -->
+            <div class="sec-title style-two deep">
+
+                <h1 style="text-align:center;">Ürünlerimiz </h1>
+            </div>
+        </div>
+        <div class="container-fluid" style="margin-bottom:-90px;">
+
+            @{
+
+                Html.RenderAction("UrunlerPartial", "Home");
+            }
+
+        </div>
+    </section>
+</section>
+<!-- Service Section -->
+<section class="service-section sp-two" style="margin-top:-110px;">
+    <div class="container">
+        <div class="sec-title style-two centered">
+    
+            <h1>Hizmetlerimiz</h1>
+        </div>
+        <div class="four-item-carousel owl-carousel owl-theme owl-dot-none owl-nav-style-one">
+            <!-- service block four -->
+            @foreach (var item in Model)
+            {
+                <div class="service-block-four">
+                    <div class="inner-box hvr-float-shadow">
+                        <div class="image">
+                            <img src="~/@item.Foto" alt="" style="width:270px; height:230px;">
+                        </div>
+                        <div class="lower-content">
+                            <div class="icon-box">
+                                <span class="flaticon-note-2"></span>
+                            </div>
+                            <h4><a href="~/mevasis/hizmet-detay/@item.seourl">@item.Baslik</a></h4>
+                            <div class="text">"Detaylı Bilgi İçin Tıklayınız"</div>
+                        </div>
+                    </div>
+                </div>
+            }
+
+
+
+        </div>
+    </div>
+</section>
+<!-- Our Projects -->
+@*<section class="project-section grey-bg sp-two px-4">
+    <div class="container">
+
+        <div class="sec-title style-two deep">
+            <div class="big-title">En Son Projeler</div>
+            <h1>Projelerimiz </h1>
+        </div>
+    </div>
+    <div class="container-fluid">
+
+        @{
+
+            Html.RenderAction("ProjelerPartial", "Home");
+        }
+
+    </div>
+</section>*@
+<!-- funfact section  -->
+@*<section class="funfact-section-two black-bg-3">
+    <div class="container">
+        <div class="fact-counter">
+            <div class="row">
+                <!--Column-->
+                <article class="column counter-column col-lg-3 col-md-6 wow fadeIn" data-wow-duration="300ms">
+                    <div class="item">
+                        <div class="inner-box">
+                            <div class="icon-box">
+                                <i class="flaticon-project"></i>
+                            </div>
+                            <div class="count-outer count-box">
+                                <span class="count-text" data-speed="3000" data-stop="321">0</span>
+                                <p>Tamamlanan Proje</p>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+                <!--Column-->
+                <article class="column counter-column col-lg-3 col-md-6 wow fadeIn" data-wow-duration="600ms">
+                    <div class="item">
+                        <div class="inner-box">
+                            <div class="icon-box">
+                                <i class="flaticon-group"></i>
+                            </div>
+                            <div class="count-outer count-box">
+                                <span class="count-text" data-speed="3000" data-stop="27">0</span>
+                                <p>Danışanlar</p>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+                <!--Column-->
+                <article class="column counter-column col-lg-3 col-md-6 wow fadeIn" data-wow-duration="900ms">
+                    <div class="item">
+                        <div class="inner-box">
+                            <div class="icon-box">
+                                <i class="flaticon-trophy"></i>
+                            </div>
+                            <div class="count-outer count-box">
+                                <span class="count-text" data-speed="3000" data-stop="125">0</span>
+                                <p>Ödüller</p>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+                <!--Column-->
+                <article class="column counter-column col-lg-3 col-md-6 wow fadeIn" data-wow-duration="900ms">
+                    <div class="item">
+                        <div class="inner-box">
+                            <div class="icon-box">
+                                <i class="flaticon-computer-2"></i>
+                            </div>
+                            <div class="count-outer count-box">
+                                <nobr> %<span class="count-text" data-speed="3000" data-stop="100">0</span></nobr>
+                                <p>Muşteri Memnuniyeti</p>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </div>
+</section>*@
+<!-- Client logo -->
+<section class="testimonial-two sp-one" style="margin-top:-140px;">
+    <div class="container">
+        <div class="sec-title centered style-two">
+
+            <h1 style="margin-bottom:100px;">Referanslar</h1>
+        </div>
+        @{
+
+            Html.RenderAction("ReferanslarPartial", "Home");
+        }
+    </div>
+</section>
+<!-- News Blog -->
+<section class="blog-section sp-two" style="margin-top:-150px;">
+    <div class="container">
+        <div class="sec-title centered style-two">
+            <h1>Bizden Haberler</h1>
+        </div>
+
+        @{
+
+            Html.RenderAction("HaberlerPartial", "Home");
+        }
+
+
+    </div>
+</section>

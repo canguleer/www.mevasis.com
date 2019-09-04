@@ -1,0 +1,86 @@
+﻿
+@{
+    ViewBag.Title = "Engineframe";
+    Layout = "~/Views/Shared/Layout.cshtml";
+}
+
+@*Düzenlenmesi Gereken Yer Var*@
+<section class="project-details sp-four">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8">
+                <h1>NICE ENGINEFRAME</h1>
+                <div class="image mb-30"><img src="~/Content/images/resource/EngineFrame1.png" alt=""></div>
+            </div>
+            <div class="col-lg-4 sidebar">
+                <div class="broucher">
+                    <a href="#" class="theme-btn"><span class="flaticon-acrobat"></span>Şirket Sunumu <br>Aktif Form</a>
+                </div>
+
+                <div class="request-callback" style="text-align:justify">
+                    <div class="inner-box">
+                        <h4>Nasıl yardımcı olabiliriz?</h4>
+                        <div class="text" style="text-align:justify;">Bizimle iletişime geçmek için lütfen online kayıt formundan yada telefon ile doğrudan iletişime geçebilirsiniz.</div>
+                        <div class="phone-number"><span class="flaticon-headphones"></span>(0212) 483 70 33</div>
+                        <div class="link-btn"><a href="@Url.Action("iletisim","Home", new { area =""})" class="theem-btn btn-style-one">Bize ulaşın</a></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="content">
+            <div class="row">
+                <div class="col-lg-8">
+                    <div class="text mb-30" style="text-align:justify;">
+                        <br />NICE EnginFrame Bulut’taki teknik ve bilimsel uygulamalara erişmek için kullanılan başarılı bir üretim tabanına sahip en gelişmiş web arayüzüdür.
+                        <br />
+                        <br />NICE EnginFrame sahip olduğunuz cluster altyapısının karmaşıklığına bakmaksızın HPC kullanıcılarının işi daha hızlı yapmalarını sağlar. Kullanıcılar HPC clusterlarına, verilere, lisanslara, toplu ve etkileşimli uygulamalara, standart bir Web tarayıcısı aracılığıyla güvenli, sezgisel, hizmet odaklı bir arayüzle ulaşabilirler.
+                        <br />
+                        <br /> NICE firma oalrak HPC ve uzaktan görselleştirme alanında 20 yılı aşkın tecrübeye sahiptir. Geliştirdiği EnginFrame uygulaması ile gelişmiş veri yönetimi yetenekleri ve kullanım esnekliği sağlar. Bu ürünün asıl amacı geleneksel bir HPC altyapısının self servis, özel, karma ve genel HPC bulutu haline gelmesine yardımcı olmaktır.
+                        <br />
+                    </div>
+                    <h3>Nasıl Çalışır ?</h3>
+                    <div class="text mb-30" style="text-align:justify;">
+                        NICE EnginFrame, bir veya daha fazla HPC clusterının veya Grubunun önünde kolayca konumlandırılabilir. Kullanıcıları hemen üretken hale getirmek için önceden tanımlanmış bir dizi uygulama şablonu sağlar ve Web teknolojileri veya programlama dilleri bilgisi olmaksızın yeni uygulamalara veya daha karmaşık iş akışlarına uyum sağlamak için kolayca genişletilebilir. Ana akışlı iş planlayıcılarından yararlanan NICE EnginFrame, kullanıcı tıklamalarını iş gönderme, izleme, girdi ve çıktı veri yönetimi de dahil olmak üzere uygun eylemlere çevirir.
+                        <br />
+
+                        <ul class="list-style-six mb-30">
+                            <li>Birden fazla yükleyiciye sahip HTML5 kullanıcı arayüzü</li>
+                            <li>Geliştirilmiş iş akışları yönetimi</li>
+                            <li>Amazon Linux AMI İşletim Sistemi Desteği</li>
+                            <li>Sistem entegrasyonu için yeni web hizmeti API’si</li>
+                            <li>Citrix XenDesktop için oturum yönetimi</li>
+                            <li> AWS Cloud’da otomatik dağıtım</li>
+                        </ul>
+
+                    </div>
+                    <h3>EnginFrame'i Neden Kullanmalıyım?</h3>
+                    <ul class="list-style-six mb-30">
+                        <li>Toplu ve etkileşimli iş akışları desteği,</li>
+                        <li>HPC’nin kullanılabilirliğini ve etkinliğini en üst düzeye çıkarma,</li>
+                        <li>Veri aktarımlarını optimize etme,</li>
+                        <li>Karmaşık hizmetlerin basit halde sunma,</li>
+                        <li>Bilen / bilmeyen kullanıcı gruplarına HPC hizmetleri sunma,</li>
+                        <li> Amazon Web Hizmetleri teknolojileri ile kolay entegrasyon</li>
+                        <li>İşletim sistemi bağımısz olarak tüm Web Tarayıcılarda çalışır</li>
+                    </ul>
+                </div>
+            </div>
+            <h3>NICE EnginFrame'in Temel Özellikleri</h3>
+            <ul class="list-style-six mb-30">
+                <li>HPC sistemleri için hafif, sezgisel, uygulamaya yönelik portalı</li>
+                <li>Küçük clusterlardan büyük clusterlara kadar yapılandırılabilir ve ölçeklenebilir.</li>
+                <li>
+                    <p>Adaptive Computing Moab, Altair PBS/Pro, Univa Grid Engine, IBM Platform LSF, </p>
+                    <p> Openlava, SLURM ve TORQUE gibi ana iş planlayıcılarını destekler.</p>
+                </li>
+                <li>İş yükü, kaynak ve lisans izlemesi yapabilir.</li>
+                <li>Mükemmel giriş ve çıkış veri yönetimi</li>
+                <li>Windows ve Linux için yerleşik etkileşimli oturum yönetimi</li>
+                <li>Portal, WebServices, API ve komut satırı arabirimleri</li>
+                <li>Rol tabanlı ve bağlam tabanlı erişim kontrolü</li>
+            </ul>
+        </div>
+    </div>
+</section>
+

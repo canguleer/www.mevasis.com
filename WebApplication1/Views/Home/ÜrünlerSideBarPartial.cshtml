@@ -1,0 +1,34 @@
+﻿
+@model IEnumerable<MevaPro.Models.Urunler>
+@{
+    ViewBag.Title = "UrunlerSideBarPartial";
+    Layout = null;
+    //int index = 0;
+}
+<div class="sidebar-header">
+    <h3 >Ürünler</h3>
+</div>
+
+@foreach (var item in Model)
+{
+    string active = string.Empty;
+    string current = string.Empty;
+    //if (index == 0)
+    //{
+    //    active = "active";
+    //    current = "current";
+    //}
+    <li class="accordion block">
+
+        <div class="acc-btn @active"><div class="icon-outer"><span class="icon icon_plus fa fa-angle-down"></span> <span class="icon icon_minus fa fa-angle-down"></span></div>@item.Baslik</div>
+        <div class="acc-content @current">
+            <div class="content">
+                <div class="text" style="text-align:justify;">
+                    <a href="/mevasis/urun-detay/@item.seourl"> @item.KısaIcerik</a>
+                </div>
+            </div>
+        </div>
+    </li>
+    //index++;
+}
+<!--Accordion Block-->

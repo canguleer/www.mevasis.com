@@ -1,0 +1,261 @@
+﻿
+@{
+    ViewBag.Title = "Bright_Cluster";
+    Layout = "~/Views/Shared/Layout.cshtml";
+}
+
+
+<!-- Service details -->
+<section class="project-details sp-four">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8">
+                <h1>BRIGHT CLUSTER MANAGER</h1>
+                <div class="image mb-30"><img src="~/Content/images/resource/BrightC.jpg" alt=""></div>
+            </div>
+            <div class="col-lg-4 sidebar">
+                <div class="broucher">
+                    <a href="#" class="theme-btn"><span class="flaticon-acrobat"></span>Şirket Sunumu <br>Aktif Form</a>
+                </div>
+
+                <div class="request-callback" style="text-align:justify">
+                    <div class="inner-box">
+                        <h4>Nasıl yardımcı olabiliriz?</h4>
+                        <div class="text" style="text-align:justify;">Bizimle iletişime geçmek için lütfen online kayıt formundan yada telefon ile doğrudan iletişime geçebilirsiniz.</div>
+                        <div class="phone-number"><span class="flaticon-headphones"></span>(0212) 483 70 33</div>
+                        <div class="link-btn"><a href="@Url.Action("iletisim","Home", new { area =""})" class="theem-btn btn-style-one">Bize ulaşın</a></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="content">
+            <div class="row">
+                <div class="col-lg-8">
+                    <div class="text mb-30">
+                        HPC son kullanıcıları için kullanım imkanı olmayan Bright Cluster Manager en alt seviyede Cluster kurulumu ve donanım, işletim sistemi, HPC yazılımı için tek noktadan yönetim imkanı sağlar.
+                        <br />
+                        <br />HPC, Big Data ve OpenStack için sistem yöneticilerinin işini kolaylaştırmak için tasarlanmıştır. Donanım bağımsız olarak ölçeklenebilir bir yapıdadır.
+                    </div>
+                    <h3>Nasıl Çalışır ?</h3>
+                    <div class="text" style="text-align:justify;">
+                        Bright Cluster Manager birleştirilmiş bir arabirimden donanım, işletim sistemi
+                        ve işyükü yöneticisi hazırlarken kümeleri tek bir bütün olarak yönetmenizi sağlar. Bu durum güvenilir
+                        bir cluster kurulumu ve yönetimini kolaylaştırır. Cluster çalışmaya başladıktan sonra, Bright Cluster Manager
+                        yönetimi programı, cluster içinde yer alan her node her alanında gözetim altında tutulur ve yazılımda veya donanımda
+                        algıladığı sorunları raporlar; böylelikle kolaylıkla sorun hakkında işlem yapabilir ve clusterı 7×24 çalışabilir tutabilirsiniz.
+                        Bright Cluster Manager , clusterter içinde olup bitenleri her yerde, her an görmenize ve bunlara kolaylıkla yanıt vermenize olanak tanır.
+                    </div>
+                    <div class="col-md-7"><div class="image" style="margin-left:-15px;"><img src="~/Content/images/resource/graph-5.jpg" alt=""></div></div>
+                    <h3>Yetenekleri</h3>
+                    <ul class="accordion-box">
+                        <!--Accordion Block-->
+                        <li class="accordion block">
+                            <div class="acc-btn active"><div class="icon-outer"><span class="icon icon_plus fa fa-angle-down"></span> <span class="icon icon_minus fa fa-angle-down"></span></div>Kurulum Yöneticisi</div>
+                            <div class="acc-content current">
+                                <div class="content">
+                                    <div class="text" style="text-align:justify;">
+                                        Bright Cluster Manager’ı yüklemek Linux, HPC, Hadoop veya OpenStack uzmanlığı gerektirir. Kurulum çok esnektir ve kendiniz için özelleştirebileceğiniz pek çok seçenek sunulmaktadır. Yükleme sırasında yapılandırılan hemen hemen tüm ayarlar daha sonra değiştirilebilir.
+                                        <br />
+                                        Bright Cluster Manager ek yazılıma hatta işletim sistemine gerek duymadan fiziksel sunucular üzerine kurulur. Bundan dolayı Yazılım Uyumluluğu garanti edilmektedir.
+                                        <br />
+                                        Bright Cluster Manager Kurucusu, seçtiğiniz Linux dağıtımının içine Apache Hadoop, Apache Spark ve OpenStack da dahil olmak üzere, gereksinim duyabileceğiniz tüm altyapı bileşenlerini dahil ederek kurulumu tamamlar. Bazı durumlarda mevcut bir Linux kurulumunun üstüne de kurulum yapmak mümkündür.
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+
+                        <!--Accordion Block-->
+                        <li class="accordion block">
+                            <div class="acc-btn"><div class="icon-outer"><span class="icon icon_plus fa fa-angle-down"></span> <span class="icon icon_minus fa fa-angle-down"></span></div>Node Provisioning</div>
+                            <div class="acc-content">
+                                <div class="content">
+
+                                    <div class="text" style="text-align:justify;">
+                                        İşletim sistemi imajarının nodelara dağıtılması tüm Cluster Yönetim Yazılımlarının ana görevidir. Güçlü / esnek node ve yazılım imajı hazırlama özellikle büyük ve karmaşık clusterlar için gereklidir. Bright Cluster Manager bu noktada kendinden isteneni fazlasıyla sağlamaktadır.
+                                    </div>
+                                    <p><strong>Yetenekleri;</strong></p>
+                                    <ul class="list-style-six mb-30">
+                                        <li>Node ya da cluster kurulumunu birkaç dakika içinde tamamlayabilirsiniz</li>
+
+                                        <li> İstediğiniz sayıda node imajı oluşturup, yönetir ve kullabilirsiniz.</li>
+
+                                        <li> Çok farklı Linux çekirdeklerine veya Linux, Apache Hadoop ve OpenStack dağıtımlarına dayalı olarak imajlar hazırlayabilirsiniz.</li>
+
+                                        <li> Yazılım uyumluluklarını bozmadan imaj oluşturabilir ya da değiştirebilirsiniz.</li>
+
+                                        <li> Tek bir komutla veya birkaç tıklamayla imajları tek tek nodelara veya node gruplarına atayabilirsiniz.</li>
+
+                                        <li> Cluster içinde bulunan nodelara giriş yapmadan HeadNode üzerinde imajları değiştirebilirsiniz.</li>
+
+                                        <li> Baştan kurulum yapmak yerine Headnode üzerindeki imaj kullanılarak yeniden başlatma ve kesinti gerektirmeksizin nodeları canlı güncelleme yapılabilirsiniz.</li>
+
+                                        <li> RPM paketi komutlarını node imajları üzerinde kullanabilirsiniz.</li>
+
+                                        <li> İmajları aşamalı olarak güncelleyebilir ve değişiklikleri node lara aktarabilirsiniz.</li>
+
+                                        <li> Nodelar üzerindeki disklerin nasıl bölümlendirileceğini yapılandırabilirsiniz (isteğe bağlı olarak yazılım RAID ve / veya LVM kullanarak).</li>
+
+                                        <li> Diskleri veya disk bölümlerinin üst üste yazılmasını önleyebilirsiniz</li>
+
+                                        <li> İmajları disk kullanmadan memory üzerinde çalıştırabilirsiniz.</li>
+
+                                        <li> Node imajları üzeinde yapılan değişiklikleri takip etmek için sürüm takibi yapabilirsiniz.</li>
+
+                                        <li> Gerekli durumlarda önceden kaydedilmiş bir imaj sürümüne dönüş yapabilirsiniz.</li>
+
+                                        <li> Yalnızca HeadNode’u yedekleyerek tüm imajları yedeklemiş olursunuz.</li>
+
+                                        <li> Nodelar üzerinde klavye veya konsol erişimi olmaksızın otomatik olarak BIOS imajlarını güncelleyebilir veya BIOS yapılandırmalarını değiştirebilirsiniz.</li>
+
+                                    </ul>
+
+                                    <img class="aligncenter wp-image-1692 size-full" src="http://mevasis.com/wp-content/uploads/2017/11/node_pro.png" alt="" width="640" height="389" srcset="http://mevasis.com/wp-content/uploads/2017/11/node_pro.png 640w, http://mevasis.com/wp-content/uploads/2017/11/node_pro-300x182.png 300w" sizes="(max-width: 640px) 100vw, 640px">
+
+                                </div>
+                            </div>
+                        </li>
+
+                        <!--Accordion Block-->
+                        <li class="accordion block">
+                            <div class="acc-btn"><div class="icon-outer"><span class="icon icon_plus fa fa-angle-down"></span> <span class="icon icon_minus fa fa-angle-down"></span></div>Grafiksel Kullanıcı Arayüzü</div>
+                            <div class="acc-content">
+                                <div class="content">
+
+                                    <div class="wpb_wrapper">
+                                        <p>Bright Cluster Manager en az seviyede Linux, HPC, Hadoop veya OpenStack bilgisi olsa bile cluster yönetimini kolaylaştırmak için tasarlanmış bir Grafik Kullanıcı Arayüzü (GUI) içerir. Bright sezgisel GUI’si, tek arayüz üzerinden tüm sistemin görünürlüğünü ve kontrolünü sağlar. Bu sayede cluster için birden fazla GUI’yi görüntüleme ve çalıştırma gereksinimini ortadan kalkar.</p>
+                                        <p>Bright Cluster Manager GUI çok kullanıcılı ve çoklu cluster yönetimi olarak hizmet eder. Birden fazla cluster yöneticisi her yönetici için tamamen yapılandırılabilir uygun izinler ile GUI’de kendi giriş hesaplarına sahip olabilir. Ayrıca, GUI farklı konumlarda ve farklı türdeki birden çok cluster’ı yönetebilir. GUI’ye eklenen her cluster daha sonra kaynaklar ağacında ayrı olarak gösterilir. GUI’nin ana başlıkları aşağıdaki gibi sıralanabilir;</p>
+                                        <p>
+                                            1 ) Menü Bar<br>
+                                            2 ) Kaynaklar<br>
+                                            3 ) Sekmeler<br>
+                                            4 ) Ana Alan<br>
+                                            5) Olay Görüntüleyici
+                                        </p>
+                                        <p><img class="aligncenter wp-image-1695 size-full" src="http://mevasis.com/wp-content/uploads/2017/11/grafiksel.png" alt="" width="554" height="504" srcset="http://mevasis.com/wp-content/uploads/2017/11/grafiksel.png 554w, http://mevasis.com/wp-content/uploads/2017/11/grafiksel-300x273.png 300w" sizes="(max-width: 554px) 100vw, 554px"></p>
+
+                                    </div>
+
+                                </div>
+                            </div>
+                        </li>
+
+                        <!--Accordion Block-->
+                        <li class="accordion block">
+                            <div class="acc-btn"><div class="icon-outer"><span class="icon icon_plus fa fa-angle-down"></span> <span class="icon icon_minus fa fa-angle-down"></span></div>Kapsamlı İzleme</div>
+                            <div class="acc-content">
+                                <div class="content">
+                                    <div class="text" style="text-align:justify;">
+                                        Bright Cluster Manager ile kapsamlı bir dizi donanım ve yazılım ölçümü izlenebilir, görselleştirilebilir ve çeşitli şekillerde analiz edilebilirsiniz. Linux çekirdeğinde bulunan hemen hemen tüm yazılım ve donanım ölçütleri ve IPMI gibi donanım yönetim arabirimlerinde bulunan tüm donanım ölçütleri mevcuttur. Bunlara ek olarak kapsamlı Hadoop altyapısı (JVM) ve hizmetleri (HDFS, YARN) ölçümleri de mevcuttur.
+                                        <br />
+                                        <br />Mevcut Ölçütler
+                                        <br />
+                                        <br /> 1) Cluster Metrics : Clusterın bütünü için metrikler olup, çoğunlukla tüm nodelar üzerinde düzenli toplanır ve/veya ortalaması alınır.
+                                        <br />
+                                        <br />2 ) Device Metrics : Her bir node için ayrı sağlanan metriklerdir. Örneğin;
+                                        <br />
+                                        <br /> CPU; Hız, Boşta Kalma Süresi, Kullanıcı Zamanı, Sistem Zamanı, Bekleme Süresi.
+                                        Disk; Boş Alan, Kullanılan Alan,I / O Performansı, SMART Data.
+                                        Memory; Boş Bellek, Kullanılan Bellek, Boş Takas Alanı, Kullanılan Takas Alanı, Tampon Bellek, Önbellek.
+                                        Network; Gönderilen / alınan Byte, IP / TCP / UDP Hataları.
+                                        Çevresel; Sıcaklık, Fan Hızı.
+                                        İşletim Sistemi; Foklar, Yük Ortalama, Süreç Sayısı, Çalışan Süreçler, Çalışma Süresi.
+                                        Yük; Çalışan ve Bekleyen İşler, Başarısız İşler, Tamamlanmış İşler, Tahmini Gecikme, Ortalama İş Süresi, Ortalama Genişleme Faktörü.
+                                        <br />
+                                        <br /> Özel Metrikler
+                                        <br />
+                                        Varsayılan metriklere ek olarak, özel metrik koleksiyonu içeren komut dosyaları kullanarak izleme için özel metrikleri kolayca ekleyebilirsiniz. Özel metriklere örnek olarak, bir uygulamadan veya bir UPS’e, depolama birimi, güvenlik duvarı aygıtı, bant robotu, SAN anahtarı veya KVM anahtarı gibi bir aygıta gelen değerleri içerebilir.
+                                        <br />
+                                        <br /> Grafiklerle Görselleştirme
+                                        <br />
+                                        Grafik çizgi rengi ve stili, grafik doldurma rengi ve stili ve grafik şeffaflığı gibi çoğu özelliği tümüyle yapılandırılabilir. Mevcut tüm metrikler grafikler kullanılarak görselleştirilebilir. İzleme görselleştirme penceresinde, birden fazla grafik aynı anda gösterilebilir. Metrik ağacından boş bir grafik alanına sürükleyerek yeni bir grafik oluşturulabilir. Birden fazla metrik mevcut boş grafik alanlarına sürüklenerek bu metrikler arasında görsel karşılaştırma yapabılabilir.
+
+                                        Farenizi grafiğin bir alanının üzerine sürükleyerek grafikler arasında kolayca yakınlaşıp uzaklaşabilirsiniz. Daha sonra izleme sistemi, grafiği daha küçük veya daha büyük ölçekte yeniden oluşturmak için gerekli verileri otomatik olarak alır.
+
+                                        İzleme ve görselleştirme penceresinin tüm yapılandırmaları gelecekte kullanılmak üzere kaydedilebilir. Örneğin, her biri kendi özelleştirilmiş renk şemasına sahip olan 48 farklı grafiğin 8 x 6 matrisini oluşturduysanız, bu yapılandırmayı kaydedebilir ve daha sonra hızlı bir şekilde yeniden kullanabilirsiniz.
+                                        <br />
+                                        <br />Raf Görünümü ile Görselleştirme
+
+                                        Raf Görünümü, renk ölçeğini kullanarak node başına isteğe bağlı olarak bir veya iki metriğin görüntülendiği cluster’ın raf düzenini gösterir.
+
+                                        Mevcut tüm metrikler Raf Görünümü’nde görselleştirilebilir. Raf Görünümü, renk ölçeğini kullanarak node başına isteğe bağlı olarak bir veya iki metriğin görüntülendiği clusterın raf düzenini gösterir.
+
+                                        Clusterdaki nodeların, anahtarların ve diğer aygıtların sırası ve boyutu, Bright Cluster Manager tarafından biliniyorsa, raf düzenini Raf Görünümü’nde oluşturmak için kullanılacaktır. Aksi takdirde düğümler ve anahtarlar eşit büyüklükte ve alfabetik sırayla gösterilir.
+
+                                        Birçok raflı cluster için “uzaklaştır” özelliği, birçok raftaki metrik değerlerin aynı anda bir renk haritası olarak görülebilmesini sağlar.
+
+                                        Raf Görünümü, clusterınızda olup bitteni görselleştirmek için çok kullanışlı bir araçtır. Örneğin, İsteğe bağlı CPU veya sistem sıcaklıklarını Kabin İçi Görünüm’de gösteriyorsanız, clusterınızın bazı bölümlerinin diğer bölümlerden daha sıcak olup olmadığını anında görebilirsiniz. Raf Görünümü’nü, birbirleriyle ilişkilendirilmiş olup olmadıklarını görmek için iki metriği aynı anda göstermek için de kullanabilirsiniz. Örneğin, fan hızları ve CPU sıcaklıkları genellikle belirli bir korelasyon seviyesi gösterecektir.
+                                    </div>
+
+
+                                </div>
+                            </div>
+                        </li>
+                        <!--Accordion Block-->
+                        <li class="accordion block">
+                            <div class="acc-btn"><div class="icon-outer"><span class="icon icon_plus fa fa-angle-down"></span> <span class="icon icon_minus fa fa-angle-down"></span></div>GPU Yönetimi</div>
+                            <div class="acc-content">
+                                <div class="content">
+                                    <div class="text" style="text-align:justify;">
+                                        Bright Cluster Manager GPU’yu maksimum düzeyde kontrol altına alıp zaman içindeki durum ve etkinlikleri hakkında bilgi sahibi olmak için NVIDIA® Tesla ™ GPU’ların işlevselliğini kullanan güçlü GPU yönetimi ve izleme yetenekleri içerir. Bright buna ek olarak gerekli CUDA ve OpenCL kütüphanelerini de içerir.
+                                    </div>
+
+
+                                </div>
+                            </div>
+                        </li>
+                        <!--Accordion Block-->
+                        <li class="accordion block">
+                            <div class="acc-btn"><div class="icon-outer"><span class="icon icon_plus fa fa-angle-down"></span> <span class="icon icon_minus fa fa-angle-down"></span></div>GPU Monitoring</div>
+                            <div class="acc-content">
+                                <div class="content">
+                                    <div class="text" style="text-align:justify;">
+                                        <p>Bir grafikte bir veya daha fazla GPU metriğini görselleştirme, Bright Cluster Manager ile çok kolaydır. Kepler mimarisi olan NVIDIA Tesla K80 çift GPU hızlandırıcısından ve aynı zamanda GPU hızlandırıcılarının tek bir kasadaki koleksiyonlarındaki gibi Desteklenen GPU’lardan ve GPU Hesaplama Sistemlerinden metrikleri örnekleyebilir ve izleyebilirsiniz. İçerdiği metrikler;</p>
+                                    </div>
+                                    <div class="wpb_wrapper">
+                                        <p>
+                                            • GPU sıcaklıkları<br>
+                                            • GPU exclusivity modeları<br>
+                                            • GPU fan hızları<br>
+                                            • System fan hızları<br>
+                                            • PSU voltaj ve akım<br>
+                                            • System LED durumları<br>
+                                            • GPU ECC istatistikleri (Sadece Fermi GPU)
+                                        </p>
+                                        <p>Bright Cluster Manager GPU metrik eşikleri aşıldığında uyarıların ve eylemlerin otomatik olarak tetiklenmesini sağlar. Bu tür kurallar gereksinimlerinize uyacak şekilde tamamen yapılandırılabilir ve herhangi bir dahili küme yönetimi komutu, Linux komutu veya kabuk betiği bir eylem olarak kullanılabilir.</p>
+                                        <p>Örneğin, GPU sıcaklığı belirlenmiş bir değeri aştığında otomatik olarak bir e-posta almak ve GPU düğümünü kapatmak istiyorsanız, Bright Cluster Manager’da kolayca yapılandırılabilirsiniz.</p>
+                                        <p><img class="aligncenter wp-image-1698 size-full" src="http://mevasis.com/wp-content/uploads/2017/11/grafik.png" alt="" width="882" height="834" srcset="http://mevasis.com/wp-content/uploads/2017/11/grafik.png 882w, http://mevasis.com/wp-content/uploads/2017/11/grafik-300x284.png 300w, http://mevasis.com/wp-content/uploads/2017/11/grafik-768x726.png 768w" sizes="(max-width: 882px) 100vw, 882px"></p>
+
+                                    </div>
+
+                                </div>
+                            </div>
+                        </li>
+                        <!--Accordion Block-->
+                        <li class="accordion block">
+                            <div class="acc-btn"><div class="icon-outer"><span class="icon icon_plus fa fa-angle-down"></span> <span class="icon icon_minus fa fa-angle-down"></span></div>Cloudbursting</div>
+                            <div class="acc-content">
+                                <div class="content">
+                                    <div class="text" style="text-align:justify;">
+                                        <p>Bright Cluster Manager sizin için karmaşıklığı yönetirken, bulutun sınırsız gücünü serbest bırakır. Bright ile kolayca bulutta yeni bir cluster oluşturabilir veya bulut tabanlı kaynakları mevcut clusterınıza anında ekleyebilirsiniz.</p>
+                                        <p>Bright Cluster Manager’ın yerinde clusterlara sağladığı aynı güçlü cluster hazırlama, izleme, zamanlama ve yönetim özellikleri bulut içine de sağlar. Bu da sanal bulut kaynaklarının etkin ve verimli kullanılmasını sağlar. Yalnızca birkaç fare tıklaması ile ve Linux veya bulut konusunda uzman bilgisi olmaksızın, Amazon EC2 veya Microsoft Azure gibi bir genel buluta erişebilirsiniz.</p>
+                                    </div>
+                                    <div class="wpb_text_column wpb_content_element ">
+                                        <div class="wpb_wrapper">
+
+                                            <p><img class="aligncenter wp-image-1700 size-full" src="http://mevasis.com/wp-content/uploads/2017/11/cloud.png" alt="" width="613" height="496" srcset="http://mevasis.com/wp-content/uploads/2017/11/cloud.png 613w, http://mevasis.com/wp-content/uploads/2017/11/cloud-300x243.png 300w" sizes="(max-width: 613px) 100vw, 613px"></p>
+
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                    <!-- end -->
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
